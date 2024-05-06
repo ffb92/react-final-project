@@ -45,7 +45,7 @@
 # Layout
 
 - pages will hold every page for the User like HomeScreen.
-- components is for forms, buttons, inputs
+- components is for forms, buttons, inputs, Navbar
 - hooks start with use.. and holds every hook
 - api for the fetch
 - in utils is every function
