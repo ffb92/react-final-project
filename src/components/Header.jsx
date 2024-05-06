@@ -1,11 +1,12 @@
 import Navbar from "./Navbar";
-import logo from "/logo.png";
+import logo from "../assets/logo.png";
 const Header = () => {
   return (
-    <div className="flex items-center h-24 border-2 border-red-700">
-      <div className="flex h-16">
+    <div className="flex items-center  h-12 bg-red-600">
+      <div className="flex h-8">
         <img src={logo} alt="logo" className="object-scale-down" />
       </div>
+      <h1 className="text-slate-200 pl-10">KG Dürscheder Mellsäck</h1>
       <Navbar />
     </div>
   );

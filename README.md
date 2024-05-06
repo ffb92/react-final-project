@@ -24,23 +24,28 @@
 
 # Pages
 
-- Vorstand
-- Vereinsgeschichte
-- Mitglieder
-- Tanzkorps/Kindertanzkorps
+- Über Uns:
+  - Vorstand
+  - Vereinsgeschichte
+  - Mitglieder
+  - Tanzkorps/Kindertanzkorps
+  - Satzung
 - Termine/Veranstaltungen
-- News
+
 - Eintrittskarten
 - Fotos
-- Ansprechpartner
-- Satzung
+- Kontakt
+
+- Footer:
+  - Impressum
+  - Datenschutz
+  - Social Media Links
+
+Erstmal raus:
+
 - Presseberichte
 - Mitgliedsantrag
-
-- Impressum
-- Datenschutz
-- Kontakt
-- Social Media Links
+- News
 
 # Layout
 
