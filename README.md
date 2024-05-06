@@ -1,8 +1,52 @@
-# React + Vite
+# Todo
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- Responsive - Mobile first!
+- Figma
+- Ideen einholen
+- Struktur der Ordner etc
+- Tutorials gucken
+- 10-20 Min präsentieren (Nochmal informieren, was man alles sagen sollte)
+- Cookies akzeptieren einbauen
 
-Currently, two official plugins are available:
+* Gucken was wir alles für Hooks etc genutzt haben
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# Hooks & Tools
+
+- useEffect
+- useState
+- API / Async await & fetching
+- useRef
+- React Router
+- use Reducer
+- use Context & props
+- handle Forms
+- wichtigste JS Functions: filter, map, reduce, ternary, spread, find, forEach, includes
+
+# Pages
+
+- Vorstand
+- Vereinsgeschichte
+- Mitglieder
+- Tanzkorps/Kindertanzkorps
+- Termine/Veranstaltungen
+- News
+- Eintrittskarten
+- Fotos
+- Ansprechpartner
+- Satzung
+- Presseberichte
+- Mitgliedsantrag
+
+- Impressum
+- Datenschutz
+- Kontakt
+- Social Media Links
+
+# Layout
+
+- pages will hold every page for the User like HomeScreen.
+- components is for forms, buttons, inputs
+- hooks start with use.. and holds every hook
+- api for the fetch
+- in utils is every function
+- routes for the routes configuration
