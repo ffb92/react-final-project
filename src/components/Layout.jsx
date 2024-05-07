@@ -6,11 +6,12 @@ import Header from "./Header";
 // eslint-disable-next-line react/prop-types
 const Layout = ({ children }) => {
   return (
-    <>
+    // Wichtig, damit der Footer unten bleibt
+    <div className="flex flex-col min-h-screen">
       <Header />
       {children}
       <Footer />
-    </>
+    </div>
   );
 };
 

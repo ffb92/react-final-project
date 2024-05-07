@@ -8,6 +8,8 @@ import HistoryScreen from "../pages/HistoryScreen";
 import MemberScreen from "../pages/MemberScreen";
 import DancingScreen from "../pages/DancingScreen";
 import StatutesScreen from "../pages/StatutesScreen";
+import ImprintScreen from "../pages/ImprintScreen";
+import DataPrivacyScreen from "../pages/DataPrivacyScreen";
 
 const routes = [
   { path: "/", element: <HomeScreen />, id: 1 },
@@ -20,6 +22,8 @@ const routes = [
   { path: "/tickets", element: <TicketsScreen />, id: 8 },
   { path: "/pictures", element: <PicturesScreen />, id: 9 },
   { path: "/contact", element: <ContactScreen />, id: 10 },
+  { path: "/imprint", element: <ImprintScreen />, id: 11 },
+  { path: "/data-privacy", element: <DataPrivacyScreen />, id: 12 },
 ];
 
 export default routes;

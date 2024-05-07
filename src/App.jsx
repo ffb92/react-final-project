@@ -12,6 +12,8 @@ import HistoryScreen from "./pages/HistoryScreen";
 import MemberScreen from "./pages/MemberScreen";
 import DancingScreen from "./pages/DancingScreen";
 import StatutesScreen from "./pages/StatutesScreen";
+import ImprintScreen from "./pages/ImprintScreen";
+import DataPrivacyScreen from "./pages/DataPrivacyScreen";
 
 function App() {
   const navigate = useNavigate();
@@ -32,6 +34,8 @@ function App() {
           <Route path="/tickets" element={<TicketsScreen />} />
           <Route path="/pictures" element={<PicturesScreen />} />
           <Route path="/contact" element={<ContactScreen />} />
+          <Route path="/imprint" element={<ImprintScreen />} />
+          <Route path="data-privacy" element={<DataPrivacyScreen />} />
         </Routes>
       </NextUIProvider>
     </Layout>
