@@ -11,6 +11,8 @@
     "git-push": "git add . && git commit -m 'Automated commit' && git push"
   },
   "dependencies": {
+    "@nextui-org/react": "^2.3.6",
+    "framer-motion": "^11.1.9",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^5.2.0",
