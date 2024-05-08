@@ -15,6 +15,13 @@ import StatutesScreen from "./pages/StatutesScreen";
 import ImprintScreen from "./pages/ImprintScreen";
 import DataPrivacyScreen from "./pages/DataPrivacyScreen";
 
+//! Content beim rendern animiert "einlaufen" lassen
+//! DarkMode?
+
+
+
+
+
 function App() {
   const navigate = useNavigate();
 
