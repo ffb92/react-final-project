@@ -19,6 +19,7 @@ import DataPrivacyScreen from "./pages/DataPrivacyScreen";
 //! DarkMode?
 //! Icons separate Component erstellen?
 //! Back to top Button
+//! images auslagern
 
 function App() {
   const navigate = useNavigate();
