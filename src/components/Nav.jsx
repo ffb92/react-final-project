@@ -13,17 +13,12 @@ import {
   Dropdown,
   DropdownMenu,
 } from "@nextui-org/react";
-import { ChevronDown } from "./Icons.jsx";
+import { AiOutlineArrowDown } from "react-icons/ai";
 import logo from "../assets/logo.png";
-import { Link as RouterLink, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Nav = () => {
-const navigate = useNavigate();
-
-
-  const icons = {
-    chevron: <ChevronDown fill="currentColor" size={16} />,
-  };
+  const navigate = useNavigate();
 
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
@@ -65,7 +60,9 @@ const navigate = useNavigate();
       {/* Mobile */}
       <NavbarContent className="sm:hidden pr-3" justify="center">
         <NavbarBrand>
-          <img src={logo} alt="logo" className="size-12" />
+          <Link to="/">
+            <img src={logo} alt="logo" className="size-12" />
+          </Link>
         </NavbarBrand>
       </NavbarContent>
       {/* Desktop */}
@@ -74,9 +71,9 @@ const navigate = useNavigate();
           <img src={logo} alt="logo" className="size-12" />
         </NavbarBrand>
         <NavbarItem isActive>
-          <RouterLink to="/" key="/" aria-current="page">
+          <Link to="/" key="/" aria-current="page">
             Startseite
-          </RouterLink>
+          </Link>
         </NavbarItem>
         <Dropdown>
           <NavbarItem>
@@ -84,7 +81,7 @@ const navigate = useNavigate();
               <Button
                 disableRipple
                 className="p-0 bg-transparent data-[hover=true]:bg-transparent"
-                endContent={icons.chevron}
+                endContent={<AiOutlineArrowDown />}
                 radius="sm"
                 variant="light"
               >
@@ -101,11 +98,10 @@ const navigate = useNavigate();
           >
             {Object.entries(dropdownLinks).map(([key, value]) => (
               <DropdownItem
-                as={RouterLink}
+                as={Link}
                 to={value}
                 key={key}
                 description={`Beschreibung für ${key}`} // Passen Sie die Beschreibung entsprechend an
-                startContent={icons[key]} // Stellen Sie sicher, dass Sie die Icons entsprechend verwalten
               >
                 {key}
               </DropdownItem>
@@ -115,28 +111,28 @@ const navigate = useNavigate();
 
         {Object.entries(HeaderLinks).map(([key, value]) => (
           <NavbarItem key={key}>
-            <RouterLink to={value} aria-current="page">
+            <Link to={value} aria-current="page">
               {key}
-            </RouterLink>
+            </Link>
           </NavbarItem>
         ))}
       </NavbarContent>
 
       <NavbarContent justify="end">
-      <NavbarItem>
-        <Button
-          onClick={() => navigate('/contact')} // Navigieren Sie zur Kontaktseite
-          variant="flat"
-        >
-          Kontakt
-        </Button>
-      </NavbarItem>
-    </NavbarContent>
+        <NavbarItem>
+          <Button
+            onClick={() => navigate("/contact")} // Navigieren Sie zur Kontaktseite
+            variant="flat"
+          >
+            Kontakt
+          </Button>
+        </NavbarItem>
+      </NavbarContent>
       {/* Mobile */}
       <NavbarMenu>
         {Object.entries(menuItems).map(([key, path], index) => (
           <NavbarMenuItem key={key}>
-            <RouterLink
+            <Link
               to={path}
               className="w-full"
               color={
@@ -149,7 +145,7 @@ const navigate = useNavigate();
               size="lg"
             >
               {key}
-            </RouterLink>
+            </Link>
           </NavbarMenuItem>
         ))}
       </NavbarMenu>

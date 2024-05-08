@@ -17,10 +17,8 @@ import DataPrivacyScreen from "./pages/DataPrivacyScreen";
 
 //! Content beim rendern animiert "einlaufen" lassen
 //! DarkMode?
-
-
-
-
+//! Icons separate Component erstellen?
+//! Back to top Button
 
 function App() {
   const navigate = useNavigate();
