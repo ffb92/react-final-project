@@ -121,7 +121,7 @@ const Nav = () => {
       <NavbarContent justify="end">
         <NavbarItem>
           <Button
-            onClick={() => navigate("/contact")} // Navigieren Sie zur Kontaktseite
+            onClick={() => navigate("/contact")} 
             variant="flat"
           >
             Kontakt
