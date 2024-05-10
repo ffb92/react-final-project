@@ -20,6 +20,9 @@ import DataPrivacyScreen from "./pages/DataPrivacyScreen";
 //! Icons separate Component erstellen?
 //! Back to top Button
 //! images auslagern
+//! Background vielleicht mit Gradient?
+//! Symanthisch body, header usw.?
+//! Bilder alle identische Größe
 
 function App() {
   const navigate = useNavigate();

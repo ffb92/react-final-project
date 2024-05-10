@@ -101,7 +101,7 @@ const Nav = () => {
                 as={Link}
                 to={value}
                 key={key}
-                description={`Beschreibung für ${key}`} // Passen Sie die Beschreibung entsprechend an
+                description={`Beschreibung für ${key}`}
               >
                 {key}
               </DropdownItem>
