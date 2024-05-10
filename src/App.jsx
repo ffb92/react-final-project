@@ -23,6 +23,7 @@ import DataPrivacyScreen from "./pages/DataPrivacyScreen";
 //! Background vielleicht mit Gradient?
 //! Symanthisch body, header usw.?
 //! Bilder alle identische Größe
+//! Die Nachrichten auf der Mainpage über map holen
 
 function App() {
   const navigate = useNavigate();
