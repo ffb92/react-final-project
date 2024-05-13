@@ -1,4 +1,13 @@
-import { Button, Divider } from "@nextui-org/react";
+import {
+  Divider,
+  Modal,
+  ModalContent,
+  ModalHeader,
+  ModalBody,
+  ModalFooter,
+  Button,
+  useDisclosure,
+} from "@nextui-org/react";
 import { useState } from "react";
 import Fireworks from "react-canvas-confetti/dist/presets/fireworks";
 import { useNavigate } from "react-router-dom";
@@ -16,6 +25,7 @@ const images = [
 const HomeScreen = () => {
   const [showConfetti, setShowConfetti] = useState(false);
   const navigate = useNavigate();
+  const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
   const handleConfettiAndNavigate = () => {
     setShowConfetti(true);
@@ -120,13 +130,57 @@ const HomeScreen = () => {
               >
                 Eintrittskarten?
               </Button>
-              <a
+              <Button
                 href="/"
                 aria-label=""
                 className="inline-flex items-center font-semibold text-gray-800 transition-colors duration-200 hover:text-deep-purple-accent-700"
+                onPress={onOpen}
               >
                 Mehr Infos
-              </a>
+              </Button>
+              <Modal isOpen={isOpen} onOpenChange={onOpenChange}>
+                <ModalContent>
+                  {(onClose) => (
+                    <>
+                      <ModalHeader className="flex flex-col gap-1">
+                        Modal Title
+                      </ModalHeader>
+                      <ModalBody>
+                        <p>
+                          Lorem ipsum dolor sit amet, consectetur adipiscing
+                          elit. Nullam pulvinar risus non risus hendrerit
+                          venenatis. Pellentesque sit amet hendrerit risus, sed
+                          porttitor quam.
+                        </p>
+                        <p>
+                          Lorem ipsum dolor sit amet, consectetur adipiscing
+                          elit. Nullam pulvinar risus non risus hendrerit
+                          venenatis. Pellentesque sit amet hendrerit risus, sed
+                          porttitor quam.
+                        </p>
+                        <p>
+                          Magna exercitation reprehenderit magna aute tempor
+                          cupidatat consequat elit dolor adipisicing. Mollit
+                          dolor eiusmod sunt ex incididunt cillum quis. Velit
+                          duis sit officia eiusmod Lorem aliqua enim laboris do
+                          dolor eiusmod. Et mollit incididunt nisi consectetur
+                          esse laborum eiusmod pariatur proident Lorem eiusmod
+                          et. Culpa deserunt nostrud ad veniam.
+                        </p>
+                      </ModalBody>
+                      <ModalFooter>
+                        <Button
+                          color="danger"
+                          variant="light"
+                          onPress={onClose}
+                        >
+                          Close
+                        </Button>
+                      </ModalFooter>
+                    </>
+                  )}
+                </ModalContent>
+              </Modal>
             </div>
           </div>
         </div>
@@ -192,13 +246,57 @@ const HomeScreen = () => {
               >
                 Eintrittskarten?
               </Button>
-              <a
+              <Button
                 href="/"
                 aria-label=""
                 className="inline-flex items-center font-semibold text-gray-800 transition-colors duration-200 hover:text-deep-purple-accent-700"
+                onPress={onOpen}
               >
                 Mehr Infos
-              </a>
+              </Button>
+              <Modal isOpen={isOpen} onOpenChange={onOpenChange}>
+                <ModalContent>
+                  {(onClose) => (
+                    <>
+                      <ModalHeader className="flex flex-col gap-1">
+                        Modal Title
+                      </ModalHeader>
+                      <ModalBody>
+                        <p>
+                          Lorem ipsum dolor sit amet, consectetur adipiscing
+                          elit. Nullam pulvinar risus non risus hendrerit
+                          venenatis. Pellentesque sit amet hendrerit risus, sed
+                          porttitor quam.
+                        </p>
+                        <p>
+                          Lorem ipsum dolor sit amet, consectetur adipiscing
+                          elit. Nullam pulvinar risus non risus hendrerit
+                          venenatis. Pellentesque sit amet hendrerit risus, sed
+                          porttitor quam.
+                        </p>
+                        <p>
+                          Magna exercitation reprehenderit magna aute tempor
+                          cupidatat consequat elit dolor adipisicing. Mollit
+                          dolor eiusmod sunt ex incididunt cillum quis. Velit
+                          duis sit officia eiusmod Lorem aliqua enim laboris do
+                          dolor eiusmod. Et mollit incididunt nisi consectetur
+                          esse laborum eiusmod pariatur proident Lorem eiusmod
+                          et. Culpa deserunt nostrud ad veniam.
+                        </p>
+                      </ModalBody>
+                      <ModalFooter>
+                        <Button
+                          color="danger"
+                          variant="light"
+                          onPress={onClose}
+                        >
+                          Close
+                        </Button>
+                      </ModalFooter>
+                    </>
+                  )}
+                </ModalContent>
+              </Modal>
             </div>
           </div>
         </div>
