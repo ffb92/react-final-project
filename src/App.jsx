@@ -14,6 +14,7 @@ import DancingScreen from "./pages/DancingScreen";
 import StatutesScreen from "./pages/StatutesScreen";
 import ImprintScreen from "./pages/ImprintScreen";
 import DataPrivacyScreen from "./pages/DataPrivacyScreen";
+import WeatherScreen from "./pages/WeatherScreen";
 
 //! Content beim rendern animiert "einlaufen" lassen
 //! DarkMode?
@@ -43,6 +44,7 @@ function App() {
           <Route path="/events" element={<EventsScreen />} />
           <Route path="/tickets" element={<TicketsScreen />} />
           <Route path="/pictures" element={<PicturesScreen />} />
+          <Route path="/weather" element={<WeatherScreen/>}/>
           <Route path="/contact" element={<ContactScreen />} />
           <Route path="/imprint" element={<ImprintScreen />} />
           <Route path="data-privacy" element={<DataPrivacyScreen />} />

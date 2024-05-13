@@ -10,6 +10,7 @@ import DancingScreen from "../pages/DancingScreen";
 import StatutesScreen from "../pages/StatutesScreen";
 import ImprintScreen from "../pages/ImprintScreen";
 import DataPrivacyScreen from "../pages/DataPrivacyScreen";
+import WeatherScreen from "../pages/WeatherScreen";
 
 const routes = [
   { path: "/", element: <HomeScreen />, id: 1 },
@@ -24,6 +25,7 @@ const routes = [
   { path: "/contact", element: <ContactScreen />, id: 10 },
   { path: "/imprint", element: <ImprintScreen />, id: 11 },
   { path: "/data-privacy", element: <DataPrivacyScreen />, id: 12 },
+  {path: "/weather", element: <WeatherScreen/>, id: 13}
 ];
 
 export default routes;

@@ -1,4 +1,4 @@
-import { Card, Image, Button } from "@nextui-org/react";
+import { Button, Divider } from "@nextui-org/react";
 import { useState } from "react";
 import Fireworks from "react-canvas-confetti/dist/presets/fireworks";
 import { useNavigate } from "react-router-dom";
@@ -10,6 +10,7 @@ const images = [
   {
     url: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Sitzung_des_Rates_der_Stadt_K%C3%B6ln_im_G%C3%BCrzenich%2C_Februar_2022-8738.jpg/1280px-Sitzung_des_Rates_der_Stadt_K%C3%B6ln_im_G%C3%BCrzenich%2C_Februar_2022-8738.jpg",
   },
+  // {url: "https://www.koeln.de/wp-content/uploads/2023/04/karneval-rote-funken-1197-2000-1210x712.jpg.webp"}
 ];
 
 const HomeScreen = () => {
@@ -58,7 +59,8 @@ const HomeScreen = () => {
           {showConfetti && <Fireworks autorun={{ speed: 1 }} />}
         </div>
       </div>
-      <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+      <Divider className="my-4" />
+      <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20 bg-gradient-to-r from-red-400/50 via-rose-500/75 to-red-600/75">
         <div className="max-w-screen-sm sm:text-center sm:mx-auto text-xl">
           <a
             href="/"
@@ -72,7 +74,7 @@ const HomeScreen = () => {
           <h2 className="mb-4 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
             Willkomen bei der Dürscheder Mellsäck KG
           </h2>
-          <p className="text-base text-gray-700 md:text-lg sm:px-4">
+          <p className="text-base text-white md:text-lg sm:px-4">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia
             doloremque provident maxime fugit modi sequi cumque perspiciatis
             quam quisquam fugiat.
@@ -80,7 +82,7 @@ const HomeScreen = () => {
           <hr className="w-full my-8 border-gray-300" />
         </div>
       </div>
-
+      <Divider className="my-4" />
       {/* New Hero Section */}
       <div className="relative flex flex-col-reverse py-16 lg:pt-0 lg:flex-col lg:pb-0">
         <div className="inset-y-0 top-0 right-0 z-0 w-full max-w-xl px-4 mx-auto md:px-0 lg:pr-0 lg:mb-0 lg:mx-0 lg:w-7/12 lg:max-w-full lg:absolute xl:px-0">
@@ -129,7 +131,8 @@ const HomeScreen = () => {
           </div>
         </div>
       </div>
-      <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+      <Divider className="my-4" />
+      <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20 bg-gradient-to-r from-red-400/50 via-rose-500/75 to-red-600/75">
         <div className="flex flex-col items-start max-w-screen-sm md:flex-row sm:mx-auto text-xl">
           <a href="/" className="mb-4 mr-8">
             <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-indigo-50">
@@ -151,7 +154,8 @@ const HomeScreen = () => {
           </div>
         </div>
       </div>
-      <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+      <Divider className="my-4" />
+      <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-5">
         <div className="flex flex-col max-w-screen-lg overflow-hidden bg-white border rounded shadow-sm lg:flex-row sm:mx-auto">
           <div className="relative lg:w-1/2">
             <img

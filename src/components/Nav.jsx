@@ -33,6 +33,7 @@ const Nav = () => {
     Veranstaltungen: "/events",
     Eintrittskarten: "/tickets",
     Bilder: "/pictures",
+    Wetter: "/weather",
   };
 
   // Desktoplinks
@@ -48,6 +49,7 @@ const Nav = () => {
     Veranstaltungen: "/events",
     Eintrittskarten: "/tickets",
     Bilder: "/pictures",
+    Wetter: "/weather",
   };
 
   return (
@@ -120,10 +122,7 @@ const Nav = () => {
 
       <NavbarContent justify="end">
         <NavbarItem>
-          <Button
-            onClick={() => navigate("/contact")} 
-            variant="flat"
-          >
+          <Button onClick={() => navigate("/contact")} variant="flat">
             Kontakt
           </Button>
         </NavbarItem>
