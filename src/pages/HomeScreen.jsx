@@ -13,8 +13,10 @@ import Fireworks from "react-canvas-confetti/dist/presets/fireworks";
 import { useNavigate } from "react-router-dom";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
-import { AiOutlineNotification } from "react-icons/ai";
+import { AiOutlineNotification, AiOutlineUsergroupAdd } from "react-icons/ai";
 import websiteImage from "../assets/website.png";
+import wagenImage from "../assets/wagen.jpeg";
+import { Link } from "react-router-dom";
 
 const images = [
   {
@@ -26,7 +28,9 @@ const images = [
 const HomeScreen = () => {
   const [showConfetti, setShowConfetti] = useState(false);
   const navigate = useNavigate();
-  const { isOpen, onOpen, onOpenChange } = useDisclosure();
+
+  const modal1 = useDisclosure();
+  const modal2 = useDisclosure();
 
   const handleConfettiAndNavigate = () => {
     setShowConfetti(true);
@@ -73,20 +77,20 @@ const HomeScreen = () => {
       <Divider className="my-4" />
       <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20 bg-gradient-to-r from-red-400/50 via-rose-500/75 to-red-600/75">
         <div className="max-w-screen-sm sm:text-center sm:mx-auto text-xl">
-          <a
-            href="/"
+          <Link
+            to="/"
             aria-label="View"
             className="inline-block mb-5 rounded-full sm:mx-auto"
           >
             <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-indigo-50">
               <AiOutlineNotification />
             </div>
-          </a>
+          </Link>
           <h2 className="mb-4 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
             Willkomen bei der Dürscheder Mellsäck KG
           </h2>
           <p className="text-base text-white md:text-lg sm:px-4">
-            dem pulsierenden Herz des Karnevals! Tauche ein in unsere Welt
+            Dem pulsierenden Herz des Karnevals! Tauche ein in unsere Welt
             voller Narren, Musik und unvergesslicher Feierlichkeiten, wo jeder
             Tag ein Fest ist!
           </p>
@@ -130,11 +134,11 @@ const HomeScreen = () => {
                 href="/"
                 aria-label=""
                 className="inline-flex items-center font-semibold text-gray-800 transition-colors duration-200 hover:text-deep-purple-accent-700"
-                onPress={onOpen}
+                onPress={modal1.onOpen}
               >
                 Mehr Infos
               </Button>
-              <Modal isOpen={isOpen} onOpenChange={onOpenChange}>
+              <Modal isOpen={modal1.isOpen} onOpenChange={modal1.onOpenChange}>
                 <ModalContent>
                   {(onClose) => (
                     <>
@@ -176,23 +180,26 @@ const HomeScreen = () => {
       <Divider className="my-4" />
       <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20 bg-gradient-to-r from-red-400/50 via-rose-500/75 to-red-600/75">
         <div className="flex flex-col items-start max-w-screen-sm md:flex-row sm:mx-auto text-xl">
-          <a href="/" className="mb-4 mr-8">
+          <Link to="/member" className="mb-4 mr-8">
             <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-indigo-50">
-              <AiOutlineNotification />
+              <AiOutlineUsergroupAdd />
             </div>
-          </a>
+          </Link>
           <div>
             <p className="mb-2 text-xs font-semibold tracking-wide text-gray-800 uppercase">
-              Neuer Content
+              Unsere Gemeinschaft
             </p>
             <h2 className="mb-4 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
-              Neuer Content
+              Die Menschen hinter den Masken
             </h2>
-            <p className="text-base text-gray-700 md:text-lg">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo eius
-              dolorum sapiente labore quod magni, deleniti libero autem commodi
-              obcaecati.
+            <p className="text-base text-gray-700 md:text-lg mb-5">
+              Begegne den Gesichtern hinter den Masken – Entdecke die
+              vielfältigen Persönlichkeiten und Geschichten unserer
+              Karnevalsgemeinschaft!
             </p>
+            <Button className="inline-flex items-center font-semibold text-gray-800 transition-colors duration-200 hover:text-deep-purple-accent-700">
+              <Link to="/member">Mehr Infos</Link>
+            </Button>
           </div>
         </div>
       </div>
@@ -201,7 +208,7 @@ const HomeScreen = () => {
         <div className="flex flex-col max-w-screen-lg overflow-hidden bg-white border rounded shadow-sm lg:flex-row sm:mx-auto">
           <div className="relative lg:w-1/2">
             <img
-              src="https://rote-funken.de/wp-content/uploads/2020/03/EXPORT_-20200126_Herrensitzung-0612.jpg"
+              src={wagenImage}
               alt=""
               className="object-cover w-full lg:absolute h-80 lg:h-full"
             />
@@ -220,56 +227,44 @@ const HomeScreen = () => {
               </p>
             </div>
             <h5 className="mb-3 text-3xl font-extrabold leading-none sm:text-4xl">
-              Herrensitzung 2025
+              Vom Anfang bis heute
             </h5>
             <p className="mb-5 text-gray-800">
-              Aufgrund der hohen Kartennachfrage haben wir es geschafft für 2025
-              eine zweite Damensitzung auf die Beine zu stellen Damensitzung 29.
-              Januar 2025 Mittwoch, 29.01.25 um 14 Uhr (Einlass 12:45 Uhr)
+              Ein Blick zurück in die Vergangenheit: Entdecke die spannende
+              Geschichte unserer Karnevalsgemeinschaft und ihre Entwicklung im
+              Laufe der Jahre.
             </p>
             <div className="flex items-center">
               <Button
                 href="/"
-                className="inline-flex items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide text-black transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
-              >
-                Eintrittskarten?
-              </Button>
-              <Button
-                href="/"
                 aria-label=""
                 className="inline-flex items-center font-semibold text-gray-800 transition-colors duration-200 hover:text-deep-purple-accent-700"
-                onPress={onOpen}
+                onPress={modal2.onOpen}
               >
                 Mehr Infos
               </Button>
-              <Modal isOpen={isOpen} onOpenChange={onOpenChange}>
+              <Modal isOpen={modal2.isOpen} onOpenChange={modal2.onOpenChange}>
                 <ModalContent>
                   {(onClose) => (
                     <>
                       <ModalHeader className="flex flex-col gap-1">
-                        Modal Title
+                        Geschichte
                       </ModalHeader>
                       <ModalBody>
                         <p>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit. Nullam pulvinar risus non risus hendrerit
-                          venenatis. Pellentesque sit amet hendrerit risus, sed
-                          porttitor quam.
-                        </p>
-                        <p>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit. Nullam pulvinar risus non risus hendrerit
-                          venenatis. Pellentesque sit amet hendrerit risus, sed
-                          porttitor quam.
-                        </p>
-                        <p>
-                          Magna exercitation reprehenderit magna aute tempor
-                          cupidatat consequat elit dolor adipisicing. Mollit
-                          dolor eiusmod sunt ex incididunt cillum quis. Velit
-                          duis sit officia eiusmod Lorem aliqua enim laboris do
-                          dolor eiusmod. Et mollit incididunt nisi consectetur
-                          esse laborum eiusmod pariatur proident Lorem eiusmod
-                          et. Culpa deserunt nostrud ad veniam.
+                          Die Geschichte der Dürscheder Mellsäck KG ist geprägt
+                          von Tradition, Gemeinschaft und einem
+                          unerschütterlichen Geist des Karnevals. Von den
+                          bescheidenen Anfängen bis zu unserer heutigen Präsenz
+                          in der lokalen Karnevalsszene haben wir eine
+                          faszinierende Reise hinter uns. Erfahre mehr über die
+                          Gründer und Pioniere, die den Grundstein für unsere
+                          Gemeinschaft gelegt haben, und entdecke die
+                          Meilensteine, die unseren Weg geprägt haben. Begleite
+                          uns auf einer Zeitreise durch die Jahrzehnte voller
+                          unvergesslicher Momente, und lass dich inspirieren von
+                          der Geschichte einer Gemeinschaft, die fest in den
+                          Werten des Karnevals verwurzelt ist.
                         </p>
                       </ModalBody>
                       <ModalFooter>

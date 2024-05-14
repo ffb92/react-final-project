@@ -26,6 +26,16 @@ import WeatherScreen from "./pages/WeatherScreen";
 //! Bilder alle identische Größe
 //! Die Nachrichten auf der Mainpage über map holen
 //! Ansprechpartner Seite mit nextui Table
+//! Neue Website news kleiner machen
+//! BEschreibung in der navbar einfügen
+//! Prüfen, ob wirklich alles responsive ist!
+//! Mobile schließt sich die Navbar nicht wenn man was anklickt
+//! Textseiten nicht ganze Breite
+//! Content der nur Text ist importieren und mappen?
+//! Kommentare nicht vergessen!
+//! Colors anpassen von nextui
+//! Breite des Background passt noch nicht zu 100% wird, bei 600~px rum weiss
+//? Reihenfolge und Priorität hier festlegen
 
 function App() {
   const navigate = useNavigate();
@@ -45,7 +55,7 @@ function App() {
           <Route path="/events" element={<EventsScreen />} />
           <Route path="/tickets" element={<TicketsScreen />} />
           <Route path="/pictures" element={<PicturesScreen />} />
-          <Route path="/weather" element={<WeatherScreen/>}/>
+          <Route path="/weather" element={<WeatherScreen />} />
           <Route path="/contact" element={<ContactScreen />} />
           <Route path="/imprint" element={<ImprintScreen />} />
           <Route path="data-privacy" element={<DataPrivacyScreen />} />
