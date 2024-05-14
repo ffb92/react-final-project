@@ -14,6 +14,7 @@ import { useNavigate } from "react-router-dom";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
 import { AiOutlineNotification } from "react-icons/ai";
+import websiteImage from "../assets/website.png";
 
 const images = [
   {
@@ -85,9 +86,9 @@ const HomeScreen = () => {
             Willkomen bei der Dürscheder Mellsäck KG
           </h2>
           <p className="text-base text-white md:text-lg sm:px-4">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia
-            doloremque provident maxime fugit modi sequi cumque perspiciatis
-            quam quisquam fugiat.
+            dem pulsierenden Herz des Karnevals! Tauche ein in unsere Welt
+            voller Narren, Musik und unvergesslicher Feierlichkeiten, wo jeder
+            Tag ein Fest ist!
           </p>
           <hr className="w-full my-8 border-gray-300" />
         </div>
@@ -106,30 +107,25 @@ const HomeScreen = () => {
           </svg>
           <img
             className="object-cover w-full h-56 rounded shadow-lg lg:rounded-none lg:shadow-none md:h-96 lg:h-full"
-            src="https://koelnerkarneval.de/fileadmin/_processed_/6/3/csm_cob_20170211_TV-Sitzung_74_57dd327245.jpg"
-            alt=""
+            src={websiteImage}
+            alt="Website"
           />
         </div>
         <div className="relative flex flex-col items-start w-full max-w-xl px-4 mx-auto md:px-0 lg:px-8 lg:max-w-screen-xl">
           <div className="mb-16 lg:my-40 lg:max-w-lg lg:pr-5">
             <p className="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-teal-accent-400">
-              Kumm loss mer fiere!
+              Endlich online!
             </p>
             <h2 className="mb-5 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
-              Damensitzung 2025
+              Die neue Website der KG ist da
             </h2>
             <p className="pr-5 mb-5 text-base text-gray-700 md:text-lg">
-              Aufgrund der hohen Kartennachfrage haben wir es geschafft für 2025
-              eine zweite Damensitzung auf die Beine zu stellen Damensitzung 29.
-              Januar 2025 Mittwoch, 29.01.25 um 14 Uhr (Einlass 12:45 Uhr)
+              Ein neues Kapitel beginnt: Willkommen auf der brandneuen Website
+              der Dürscheder Mellsäck KG – Erfahre alles über unsere
+              traditionsreiche Gemeinschaft und die bevorstehenden
+              Feierlichkeiten!
             </p>
             <div className="flex items-center">
-              <Button
-                href="/"
-                className="inline-flex items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide text-black transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
-              >
-                Eintrittskarten?
-              </Button>
               <Button
                 href="/"
                 aria-label=""
@@ -143,29 +139,21 @@ const HomeScreen = () => {
                   {(onClose) => (
                     <>
                       <ModalHeader className="flex flex-col gap-1">
-                        Modal Title
+                        Neue Website
                       </ModalHeader>
                       <ModalBody>
                         <p>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit. Nullam pulvinar risus non risus hendrerit
-                          venenatis. Pellentesque sit amet hendrerit risus, sed
-                          porttitor quam.
-                        </p>
-                        <p>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit. Nullam pulvinar risus non risus hendrerit
-                          venenatis. Pellentesque sit amet hendrerit risus, sed
-                          porttitor quam.
-                        </p>
-                        <p>
-                          Magna exercitation reprehenderit magna aute tempor
-                          cupidatat consequat elit dolor adipisicing. Mollit
-                          dolor eiusmod sunt ex incididunt cillum quis. Velit
-                          duis sit officia eiusmod Lorem aliqua enim laboris do
-                          dolor eiusmod. Et mollit incididunt nisi consectetur
-                          esse laborum eiusmod pariatur proident Lorem eiusmod
-                          et. Culpa deserunt nostrud ad veniam.
+                          Liebe Karnevalsfreunde, wir freuen uns, euch unsere
+                          brandneue Website vorstellen zu dürfen! Nach
+                          intensiver Arbeit und mit viel Liebe zum Detail
+                          präsentieren wir euch einen digitalen Ort, der das
+                          bunte Treiben und die herzliche Atmosphäre unserer
+                          Gemeinschaft widerspiegelt. Hier findet ihr alles, was
+                          das Karnevalsherz begehrt - von aktuellen
+                          Veranstaltungshinweisen über lustige Anekdoten bis hin
+                          zu einem Rückblick auf vergangene Festlichkeiten.
+                          Taucht ein in die Welt der Dürscheder Mellsäck KG und
+                          lasst euch von unserem Enthusiasmus mitreißen!
                         </p>
                       </ModalBody>
                       <ModalFooter>
