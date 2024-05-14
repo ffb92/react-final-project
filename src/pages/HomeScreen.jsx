@@ -17,6 +17,7 @@ import { AiOutlineNotification, AiOutlineUsergroupAdd } from "react-icons/ai";
 import websiteImage from "../assets/website.png";
 import wagenImage from "../assets/wagen.jpeg";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const images = [
   {
@@ -75,108 +76,125 @@ const HomeScreen = () => {
         </div>
       </div>
       <Divider className="my-4" />
-      <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20 bg-gradient-to-r from-red-400/50 via-rose-500/75 to-red-600/75">
-        <div className="max-w-screen-sm sm:text-center sm:mx-auto text-xl">
-          <Link
-            to="/"
-            aria-label="View"
-            className="inline-block mb-5 rounded-full sm:mx-auto"
-          >
-            <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-indigo-50">
-              <AiOutlineNotification />
-            </div>
-          </Link>
-          <h2 className="mb-4 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
-            Willkomen bei der Dürscheder Mellsäck KG
-          </h2>
-          <p className="text-base text-white md:text-lg sm:px-4">
-            Dem pulsierenden Herz des Karnevals! Tauche ein in unsere Welt
-            voller Narren, Musik und unvergesslicher Feierlichkeiten, wo jeder
-            Tag ein Fest ist!
-          </p>
-          <hr className="w-full my-8 border-gray-300" />
+      <motion.div
+        initial={{ x: "-100%", opacity: 0 }}
+        animate={{ x: "0%", opacity: 1 }}
+        transition={{ duration: 1, ease: "easeInOut" }}
+      >
+        <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20 bg-gradient-to-r from-red-400/50 via-rose-500/75 to-red-600/75">
+          <div className="max-w-screen-sm sm:text-center sm:mx-auto text-xl">
+            <Link
+              to="/"
+              aria-label="View"
+              className="inline-block mb-5 rounded-full sm:mx-auto"
+            >
+              <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-indigo-50">
+                <AiOutlineNotification />
+              </div>
+            </Link>
+            <h2 className="mb-4 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
+              Willkomen bei der Dürscheder Mellsäck KG
+            </h2>
+            <p className="text-base text-white md:text-lg sm:px-4">
+              Dem pulsierenden Herz des Karnevals! Tauche ein in unsere Welt
+              voller Narren, Musik und unvergesslicher Feierlichkeiten, wo jeder
+              Tag ein Fest ist!
+            </p>
+            <hr className="w-full my-8 border-gray-300" />
+          </div>
         </div>
-      </div>
+      </motion.div>
+
       <Divider className="my-4" />
       {/* New Hero Section */}
-      <div className="relative flex flex-col-reverse py-16 lg:pt-0 lg:flex-col lg:pb-0">
-        <div className="inset-y-0 top-0 right-0 z-0 w-full max-w-xl px-4 mx-auto md:px-0 lg:pr-0 lg:mb-0 lg:mx-0 lg:w-7/12 lg:max-w-full lg:absolute xl:px-0">
-          <svg
-            className="absolute left-0 hidden h-full text-white transform -translate-x-1/2 lg:block"
-            viewBox="0 0 100 100"
-            fill="currentColor"
-            preserveAspectRatio="none slice"
-          >
-            <path d="M50 0H100L50 100H0L50 0Z" />
-          </svg>
-          <img
-            className="object-cover w-full h-56 rounded shadow-lg lg:rounded-none lg:shadow-none md:h-96 lg:h-full"
-            src={websiteImage}
-            alt="Website"
-          />
-        </div>
-        <div className="relative flex flex-col items-start w-full max-w-xl px-4 mx-auto md:px-0 lg:px-8 lg:max-w-screen-xl">
-          <div className="mb-16 lg:my-40 lg:max-w-lg lg:pr-5">
-            <p className="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-teal-accent-400">
-              Endlich online!
-            </p>
-            <h2 className="mb-5 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
-              Die neue Website der KG ist da
-            </h2>
-            <p className="pr-5 mb-5 text-base text-gray-700 md:text-lg">
-              Ein neues Kapitel beginnt: Willkommen auf der brandneuen Website
-              der Dürscheder Mellsäck KG – Erfahre alles über unsere
-              traditionsreiche Gemeinschaft und die bevorstehenden
-              Feierlichkeiten!
-            </p>
-            <div className="flex items-center">
-              <Button
-                href="/"
-                aria-label=""
-                className="inline-flex items-center font-semibold text-gray-800 transition-colors duration-200 hover:text-deep-purple-accent-700"
-                onPress={modal1.onOpen}
-              >
-                Mehr Infos
-              </Button>
-              <Modal isOpen={modal1.isOpen} onOpenChange={modal1.onOpenChange}>
-                <ModalContent>
-                  {(onClose) => (
-                    <>
-                      <ModalHeader className="flex flex-col gap-1">
-                        Neue Website
-                      </ModalHeader>
-                      <ModalBody>
-                        <p>
-                          Liebe Karnevalsfreunde, wir freuen uns, euch unsere
-                          brandneue Website vorstellen zu dürfen! Nach
-                          intensiver Arbeit und mit viel Liebe zum Detail
-                          präsentieren wir euch einen digitalen Ort, der das
-                          bunte Treiben und die herzliche Atmosphäre unserer
-                          Gemeinschaft widerspiegelt. Hier findet ihr alles, was
-                          das Karnevalsherz begehrt - von aktuellen
-                          Veranstaltungshinweisen über lustige Anekdoten bis hin
-                          zu einem Rückblick auf vergangene Festlichkeiten.
-                          Taucht ein in die Welt der Dürscheder Mellsäck KG und
-                          lasst euch von unserem Enthusiasmus mitreißen!
-                        </p>
-                      </ModalBody>
-                      <ModalFooter>
-                        <Button
-                          color="danger"
-                          variant="light"
-                          onPress={onClose}
-                        >
-                          Close
-                        </Button>
-                      </ModalFooter>
-                    </>
-                  )}
-                </ModalContent>
-              </Modal>
+      <motion.div
+        initial={{ y: "-100%", opacity: 0 }}
+        animate={{ y: "0%", opacity: 1 }}
+        transition={{ duration: 1, ease: "easeInOut" }}
+      >
+        <div className="relative flex flex-col-reverse py-16 lg:pt-0 lg:flex-col lg:pb-0">
+          <div className="inset-y-0 top-0 right-0 z-0 w-full max-w-xl px-4 mx-auto md:px-0 lg:pr-0 lg:mb-0 lg:mx-0 lg:w-7/12 lg:max-w-full lg:absolute xl:px-0">
+            <svg
+              className="absolute left-0 hidden h-full text-white transform -translate-x-1/2 lg:block"
+              viewBox="0 0 100 100"
+              fill="currentColor"
+              preserveAspectRatio="none slice"
+            >
+              <path d="M50 0H100L50 100H0L50 0Z" />
+            </svg>
+            <img
+              className="object-cover w-full h-56 rounded shadow-lg lg:rounded-none lg:shadow-none md:h-96 lg:h-full"
+              src={websiteImage}
+              alt="Website"
+            />
+          </div>
+          <div className="relative flex flex-col items-start w-full max-w-xl px-4 mx-auto md:px-0 lg:px-8 lg:max-w-screen-xl">
+            <div className="mb-16 lg:my-40 lg:max-w-lg lg:pr-5">
+              <p className="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-teal-accent-400">
+                Endlich online!
+              </p>
+              <h2 className="mb-5 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
+                Die neue Website der KG ist da
+              </h2>
+              <p className="pr-5 mb-5 text-base text-gray-700 md:text-lg">
+                Ein neues Kapitel beginnt: Willkommen auf der brandneuen Website
+                der Dürscheder Mellsäck KG – Erfahre alles über unsere
+                traditionsreiche Gemeinschaft und die bevorstehenden
+                Feierlichkeiten!
+              </p>
+              <div className="flex items-center">
+                <Button
+                  href="/"
+                  aria-label=""
+                  className="inline-flex items-center font-semibold text-gray-800 transition-colors duration-200 hover:text-deep-purple-accent-700"
+                  onPress={modal1.onOpen}
+                >
+                  Mehr Infos
+                </Button>
+                <Modal
+                  isOpen={modal1.isOpen}
+                  onOpenChange={modal1.onOpenChange}
+                >
+                  <ModalContent>
+                    {(onClose) => (
+                      <>
+                        <ModalHeader className="flex flex-col gap-1">
+                          Neue Website
+                        </ModalHeader>
+                        <ModalBody>
+                          <p>
+                            Liebe Karnevalsfreunde, wir freuen uns, euch unsere
+                            brandneue Website vorstellen zu dürfen! Nach
+                            intensiver Arbeit und mit viel Liebe zum Detail
+                            präsentieren wir euch einen digitalen Ort, der das
+                            bunte Treiben und die herzliche Atmosphäre unserer
+                            Gemeinschaft widerspiegelt. Hier findet ihr alles,
+                            was das Karnevalsherz begehrt - von aktuellen
+                            Veranstaltungshinweisen über lustige Anekdoten bis
+                            hin zu einem Rückblick auf vergangene
+                            Festlichkeiten. Taucht ein in die Welt der
+                            Dürscheder Mellsäck KG und lasst euch von unserem
+                            Enthusiasmus mitreißen!
+                          </p>
+                        </ModalBody>
+                        <ModalFooter>
+                          <Button
+                            color="danger"
+                            variant="light"
+                            onPress={onClose}
+                          >
+                            Close
+                          </Button>
+                        </ModalFooter>
+                      </>
+                    )}
+                  </ModalContent>
+                </Modal>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
       <Divider className="my-4" />
       <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20 bg-gradient-to-r from-red-400/50 via-rose-500/75 to-red-600/75">
         <div className="flex flex-col items-start max-w-screen-sm md:flex-row sm:mx-auto text-xl">
