@@ -16,26 +16,36 @@ import ImprintScreen from "./pages/ImprintScreen";
 import DataPrivacyScreen from "./pages/DataPrivacyScreen";
 import WeatherScreen from "./pages/WeatherScreen";
 
-//! Content beim rendern animiert "einlaufen" lassen
-//! DarkMode?
-//! Icons separate Component erstellen?
-//! Back to top Button
-//! images auslagern
-//! Background vielleicht mit Gradient?
-//! Symanthisch body, header usw.?
-//! Bilder alle identische Größe
-//! Die Nachrichten auf der Mainpage über map holen
-//! Ansprechpartner Seite mit nextui Table
-//! Neue Website news kleiner machen
+
+
+//? Wichtig!
 //! BEschreibung in der navbar einfügen
-//! Prüfen, ob wirklich alles responsive ist!
 //! Mobile schließt sich die Navbar nicht wenn man was anklickt
-//! Textseiten nicht ganze Breite
-//! Content der nur Text ist importieren und mappen?
-//! Kommentare nicht vergessen!
-//! Colors anpassen von nextui
 //! Breite des Background passt noch nicht zu 100% wird, bei 600~px rum weiss
-//? Reihenfolge und Priorität hier festlegen
+//! Neue Website news kleiner machen
+
+//? Dann auch abschließend
+//! Symanthisch body, header usw.?
+//! images auslagern
+//! Colors anpassen von nextui
+
+//? Wichtig am Ende zu prüfen und kommentieren!
+//! Bilder alle identische Größe
+//! Prüfen, ob wirklich alles responsive ist!
+//! Kommentare nicht vergessen!
+//! Lighthouse
+
+//? Sollte machbar noch sein
+//! Die Nachrichten auf der Mainpage über map holen
+
+//? Bei Zeit
+//! Content beim rendern animiert "einlaufen" lassen
+//! Back to top Button
+//! DarkMode?
+
+
+
+
 
 function App() {
   const navigate = useNavigate();

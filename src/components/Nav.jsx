@@ -37,13 +37,43 @@ const Nav = () => {
   };
 
   // Desktoplinks
-  const dropdownLinks = {
-    Vorstand: "/management",
-    Geschichte: "/history",
-    Mitglieder: "/member",
-    Tanzkorps: "/dancing",
-    Satzung: "/statutes",
-  };
+  // const dropdownLinks = [
+  //   {
+  //     Vorstand: "/management",
+  //   },
+  //   { Geschichte: "/history" },
+  //   { Mitglieder: "/member" },
+  //   { Tanzkorps: "/dancing" },
+  //   { Satzung: "/statutes" },
+  // ];
+
+  const dropdownLinks = [
+    {
+      name: "Vorstand",
+      link: "/management",
+      description: "Beschreibung für den Vorstand",
+    },
+    {
+      name: "Geschichte",
+      link: "/history",
+      description: "Beschreibung für die Geschichte",
+    },
+    {
+      name: "Mitglieder",
+      link: "/member",
+      description: "Beschreibung für die Mitglieder",
+    },
+    {
+      name: "Tanzkorps",
+      link: "/dancing",
+      description: "Beschreibung für das Tanzkorps",
+    },
+    {
+      name: "Satzung",
+      link: "/statutes",
+      description: "Beschreibung für die Satzung",
+    },
+  ];
 
   const HeaderLinks = {
     Veranstaltungen: "/events",
@@ -98,14 +128,14 @@ const Nav = () => {
               base: "gap-4",
             }}
           >
-            {Object.entries(dropdownLinks).map(([key, value]) => (
+            {dropdownLinks.map((item) => (
               <DropdownItem
                 as={Link}
-                to={value}
-                key={key}
-                description={`Beschreibung für ${key}`}
+                to={item.link}
+                key={item.link}
+                description={item.description}
               >
-                {key}
+                {item.name}
               </DropdownItem>
             ))}
           </DropdownMenu>
