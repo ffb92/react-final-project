@@ -1,3 +1,30 @@
-Probleme: Lighthouse Analyse, Bilderformat und Größe
+In Figma starten
+Projekt vorstellen, wieso ich das gewählt habe
+Mindmap etc zeigen
 
-Upcoming: Mehr Animationen, Daten auslagern, Functions auslagern
+Page kurz vorstellen mit den funktionen
+In den Code gehen: 
+-Architektur/Aufbau
+-Header/Footer
+-Carousel
+-Animation
+-Bilder
+-Kontakt
+-Eintrittskarten
+-Wetter, spinner zeigen
+
+Herausforderungen:
+Router
+Nextui Library zum ersten mal genutzt
+Modale per Bild
+
+Probleme: 
+Lighthouse Analyse
+Bilderformat
+Größe der Bilder
+Code ist nicht wirklich aufgeräumt
+Table ist nicht responsive
+
+Upcoming: Mehr Animationen, Daten auslagern, Functions auslagern, Eintrittskarten verbessern, Design, Farben, Veranstaltungen und Startseite Beiträge dynamisch/mapen
+
+Fragen?

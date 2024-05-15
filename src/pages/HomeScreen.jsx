@@ -60,6 +60,7 @@ const HomeScreen = () => {
             showIndicators={false}
             showStatus={false}
             showThumbs={false}
+            dynamicHeight={false}
             width="100%"
             className="flex justify-center w-full"
           >

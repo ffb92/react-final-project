@@ -45,6 +45,7 @@ const PicturesScreen = () => {
   return (
     <main className="flex justify-center items-center h-full sm:h-screen bg-gradient-to-r from-red-400/50 via-rose-500/75 to-red-600/75">
       <div className=" py-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-8 w-5/6">
+        {/* Bilder src und infos map */}
         {picturesInfo.map((info, index) => (
           <Card key={index}>
             <CardHeader className="flex justify-center gap-3">
@@ -54,6 +55,7 @@ const PicturesScreen = () => {
             <CardBody>
               <Image
                 src={info.src}
+                // das modal öffnen mit der richtigen id
                 onClick={() => openModal(info.id)}
                 isZoomed
                 className="cursor-pointer"
@@ -71,8 +73,9 @@ const PicturesScreen = () => {
           {(onClose) => (
             <>
               <ModalHeader className="flex flex-col gap-1">
+                {/* Mit find den Namen des Bildes nutzen */}
                 {picturesInfo.find((pic) => pic.id === currentPictureId)
-                  ?.header || "No Picture Selected"}
+                  ?.header || ""}
               </ModalHeader>
               <ModalBody>
                 <Image
