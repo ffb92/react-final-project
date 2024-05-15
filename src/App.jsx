@@ -20,7 +20,7 @@ import WeatherScreen from "./pages/WeatherScreen";
 //* Beschreibung in der navbar einfügen
 //* Mobile schließt sich die Navbar nicht wenn man was anklickt
 //* Breite des Background passt noch nicht zu 100% wird, bei 600~px rum weiss
-//! Neue Website news kleiner machen
+//* Neue Website news kleiner machen
 //! Bilder gehen über Footer hinaus
 //! Tables sind nicht responsive
 //! Schrift mobile zentrieren

@@ -58,6 +58,7 @@ const PicturesScreen = () => {
                 src={info.src}
                 onClick={() => openModal(info.id)}
                 isZoomed
+                className="cursor-pointer"
               ></Image>
             </CardBody>
             <Divider />
@@ -67,7 +68,7 @@ const PicturesScreen = () => {
           </Card>
         ))}
       </div>
-      <Modal isOpen={isOpen} onOpenChange={onOpenChange}>
+      <Modal isOpen={isOpen} onOpenChange={onOpenChange} size="5xl">
         <ModalContent>
           <ModalHeader className="flex flex-col gap-1">
             {picturesInfo.find((pic) => pic.id === currentPictureId)?.header ||
