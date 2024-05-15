@@ -15,8 +15,8 @@ const EventsScreen = () => {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
   return (
-    <div>
-      <div className="relative flex flex-col-reverse py-16 lg:pt-0 mt-5 lg:flex-col lg:pb-0">
+    <main>
+      <section className="relative flex flex-col-reverse py-16 lg:pt-0 mt-5 lg:flex-col lg:pb-0">
         <div className="inset-y-0 top-0 right-0 z-0 w-full max-w-xl px-4 mx-auto md:px-0 lg:pr-0 lg:mb-0 lg:mx-0 lg:w-7/12 lg:absolute xl:px-0">
           <svg
             className="absolute left-0 hidden h-full text-white transform -translate-x-1/2 lg:block"
@@ -106,9 +106,9 @@ const EventsScreen = () => {
             </div>
           </div>
         </div>
-      </div>
+      </section>
       <Divider className="my-4" />
-      <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-5">
+      <section className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-5">
         <div className="flex flex-col max-w-screen-lg overflow-hidden bg-white border rounded shadow-sm lg:flex-row sm:mx-auto">
           <div className="relative lg:w-1/2">
             <img
@@ -200,8 +200,8 @@ const EventsScreen = () => {
             </div>
           </div>
         </div>
-      </div>
-    </div>
+      </section>
+    </main>
   );
 };
 

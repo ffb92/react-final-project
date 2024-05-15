@@ -7,7 +7,6 @@ import {
   SelectItem,
   Checkbox,
   Card,
-  CardHeader,
   CardBody,
 } from "@nextui-org/react";
 import { Link } from "react-router-dom";
@@ -15,13 +14,12 @@ import { Link } from "react-router-dom";
 const ContactScreen = () => {
   const [state, handleSubmit] = useForm("xjvnzrnw");
 
-  // Überprüfen, ob die Anfrage erfolgreich war
   const successMessage = state.succeeded
     ? "Vielen Dank Ihre Nachricht wurde erfolgreich gesendet."
     : "";
 
   return (
-    <div className="flex justify-center items-center h-screen bg-gradient-to-r from-red-400/50 via-rose-500/75 to-red-600/75">
+    <main className="flex justify-center items-center h-screen bg-gradient-to-r from-red-400/50 via-rose-500/75 to-red-600/75">
       <Card className="w-2/3 pt-5 shadow-lg">
         <CardBody>
           <h2 className="text-center mb-4 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
@@ -80,7 +78,7 @@ const ContactScreen = () => {
           </form>
         </CardBody>
       </Card>
-    </div>
+    </main>
   );
 };
 

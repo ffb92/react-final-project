@@ -41,7 +41,7 @@ const HomeScreen = () => {
   };
 
   return (
-    <>
+    <main>
       <div className="relative">
         <div>
           <Carousel
@@ -81,7 +81,7 @@ const HomeScreen = () => {
         animate={{ x: "0%", opacity: 1 }}
         transition={{ duration: 1, ease: "easeInOut" }}
       >
-        <div className="px-4 py-12 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-16 bg-gradient-to-r from-red-400/50 via-rose-500/75 to-red-600/75">
+        <section className="px-4 py-12 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-16 bg-gradient-to-r from-red-400/50 via-rose-500/75 to-red-600/75">
           <div className="max-w-screen-sm sm:text-center sm:mx-auto text-xl">
             <Link
               to="/"
@@ -102,7 +102,7 @@ const HomeScreen = () => {
             </p>
             <hr className="w-full my-8 border-gray-300" />
           </div>
-        </div>
+        </section>
       </motion.div>
 
       <Divider className="my-4" />
@@ -112,7 +112,7 @@ const HomeScreen = () => {
         animate={{ y: "0%", opacity: 1 }}
         transition={{ duration: 1, ease: "easeInOut" }}
       >
-        <div className="relative flex flex-col-reverse py-16 lg:pt-0 lg:flex-col lg:pb-0">
+        <section className="relative flex flex-col-reverse py-16 lg:pt-0 lg:flex-col lg:pb-0">
           <div className="inset-y-0 top-0 right-0 z-0 w-full max-w-xl px-4 mx-auto md:px-0 lg:pr-0 lg:mb-0 lg:mx-0 lg:w-7/12 lg:max-w-full lg:absolute xl:px-0">
             <svg
               className="absolute left-0 hidden h-full text-white transform -translate-x-1/2 lg:block"
@@ -193,10 +193,10 @@ const HomeScreen = () => {
               </div>
             </div>
           </div>
-        </div>
+        </section>
       </motion.div>
       <Divider className="my-4" />
-      <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-28 bg-gradient-to-r from-red-400/50 via-rose-500/75 to-red-600/75">
+      <section className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-28 bg-gradient-to-r from-red-400/50 via-rose-500/75 to-red-600/75">
         <div className="flex flex-col items-start max-w-screen-sm md:flex-row sm:mx-auto text-xl">
           <Link to="/member" className="mb-4 mr-8">
             <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-indigo-50">
@@ -220,9 +220,9 @@ const HomeScreen = () => {
             </Button>
           </div>
         </div>
-      </div>
+      </section>
       <Divider className="my-4" />
-      <div className="px-4 py-2 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-16">
+      <section className="px-4 py-2 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-16">
         <div className="flex flex-col max-w-screen-lg overflow-hidden bg-white border rounded shadow-sm lg:flex-row sm:mx-auto">
           <div className="relative lg:w-1/2">
             <img
@@ -301,8 +301,8 @@ const HomeScreen = () => {
             </div>
           </div>
         </div>
-      </div>
-    </>
+      </section>
+    </main>
   );
 };
 

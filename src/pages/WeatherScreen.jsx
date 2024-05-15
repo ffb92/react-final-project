@@ -33,7 +33,7 @@ const WeatherScreen = () => {
   }, []);
 
   return (
-    <div className="flex justify-center items-center h-screen bg-gradient-to-r from-red-400/50 via-rose-500/75 to-red-600/75">
+    <main className="flex justify-center items-center h-screen bg-gradient-to-r from-red-400/50 via-rose-500/75 to-red-600/75">
       <Card>
         <CardHeader className="flex gap-3">
           <Image
@@ -61,7 +61,7 @@ const WeatherScreen = () => {
           )}
         </CardFooter>
       </Card>
-    </div>
+    </main>
   );
 };
 
