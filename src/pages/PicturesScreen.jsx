@@ -13,6 +13,7 @@ import {
   Button,
   useDisclosure,
 } from "@nextui-org/react";
+import { useState } from "react";
 
 import pic_1 from "../assets/pic_1.jpg";
 import pic_2 from "../assets/pic_2.jpeg";
@@ -20,7 +21,6 @@ import pic_3 from "../assets/pic_3.jpeg";
 import pic_4 from "../assets/pic_4.jpg";
 import pic_5 from "../assets/pic_5.jpg";
 import pic_6 from "../assets/pic_6.jpg";
-import { useState } from "react";
 
 const picturesInfo = [
   { src: pic_1, header: "Bild 1", footer: "Fußtext 1", id: 1 },
@@ -32,16 +32,14 @@ const picturesInfo = [
 ];
 
 const PicturesScreen = () => {
+  // State für das modal
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
   const [currentPictureId, setCurrentPictureId] = useState(null);
 
+  // modal mit der picturesInfo id öffnen
   const openModal = (id) => {
     setCurrentPictureId(id);
     onOpen();
-  };
-
-  const closeModal = () => {
-    onOpenChange(false);
   };
 
   return (
@@ -70,23 +68,27 @@ const PicturesScreen = () => {
       </div>
       <Modal isOpen={isOpen} onOpenChange={onOpenChange} size="5xl">
         <ModalContent>
-          <ModalHeader className="flex flex-col gap-1">
-            {picturesInfo.find((pic) => pic.id === currentPictureId)?.header ||
-              "No Picture Selected"}
-          </ModalHeader>
-          <ModalBody>
-            <Image
-              src={
-                picturesInfo.find((pic) => pic.id === currentPictureId)?.src ||
-                ""
-              }
-            />
-          </ModalBody>
-          <ModalFooter>
-            <Button color="danger" variant="light" onPress={closeModal}>
-              Close
-            </Button>
-          </ModalFooter>
+          {(onClose) => (
+            <>
+              <ModalHeader className="flex flex-col gap-1">
+                {picturesInfo.find((pic) => pic.id === currentPictureId)
+                  ?.header || "No Picture Selected"}
+              </ModalHeader>
+              <ModalBody>
+                <Image
+                  src={
+                    picturesInfo.find((pic) => pic.id === currentPictureId)
+                      ?.src || ""
+                  }
+                />
+              </ModalBody>
+              <ModalFooter>
+                <Button color="danger" variant="light" onPress={onClose}>
+                  Close
+                </Button>
+              </ModalFooter>
+            </>
+          )}
         </ModalContent>
       </Modal>
     </main>

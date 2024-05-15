@@ -16,24 +16,19 @@ const ImprintScreen = () => {
             </a>
             Festnetz: +49 (0 22 07) 77 26
           </p>
-
           <h2>Vertretungsberechtigter Vorstand</h2>
           <p>
             Wilfried Fischer, 1. Vorsitzender (Anschrift wie oben) Peter
             Sievernich, 2. Vorsitzender (Anschrift wie oben)
           </p>
-
           <h2>Eintragung im Vereinsregister</h2>
           <p>
             Registergericht: Amtsgericht Bergisch Gladbach Registernummer: VR
             501500
           </p>
-
           <h2>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h2>
           <p>Wilfried Fischer (Anschrift wie oben)</p>
-
           <h2>Haftungsausschluss</h2>
-
           <h3>Haftung für Inhalte</h3>
           <p>
             Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für
@@ -51,7 +46,6 @@ const ImprintScreen = () => {
             Bekanntwerden von entsprechenden Rechtsverletzungen werden wir diese
             Inhalte umgehend entfernen.
           </p>
-
           <h3>Haftung für Links</h3>
           <p>
             Unser Angebot enthält Links zu externen Webseiten Dritter, auf deren
@@ -66,7 +60,6 @@ const ImprintScreen = () => {
             nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werden wir
             derartige Links umgehend entfernen.
           </p>
-
           <h3>Urheberrecht</h3>
           <p>
             Die durch die Seitenbetreiber erstellten Inhalte und Werke auf
@@ -83,11 +76,10 @@ const ImprintScreen = () => {
             entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen
             werden wir derartige Inhalte umgehend entfernen.
           </p>
-
           <h3>Google Analytics</h3>
           <p>
             Diese Website benutzt Google Analytics, einen Webanalysedienst der
-            Google Inc.{" "}
+            Google Inc.
           </p>
         </CardBody>
       </Card>

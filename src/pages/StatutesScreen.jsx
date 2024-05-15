@@ -14,7 +14,6 @@ const StatutesScreen = () => {
             Karnevalsgemeinschaft" (im Folgenden "DMKG" genannt).
           </p>
           <p>2. Der Verein hat seinen Sitz in Dürsched, Deutschland.</p>
-
           <h2>§2 Zweck und Aufgaben</h2>
           <p>
             1. Die DMKG verfolgt ausschließlich und unmittelbar gemeinnützige

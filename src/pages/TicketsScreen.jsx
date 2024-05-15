@@ -9,17 +9,36 @@ import {
   CardBody,
 } from "@nextui-org/react";
 import { Link } from "react-router-dom";
+import { useReducer } from 'react';
+
+// Initialer Zustand für die Ticketmenge
+const initialState = { count: 0 };
+
+// Reducer-Funktion
+function reducer(state1, action) {
+  switch (action.type) {
+    case 'increment':
+      return { count: state1.count + 1 };
+    case 'decrement':
+      // Damit der Wert nicht in den Minusbereich geht
+      return { count: Math.max(state1.count - 1, 0) }; 
+    default:
+      return state1;
+  }
+}
 
 const TicketsScreen = () => {
+  // Formspree state
   const [state, handleSubmit] = useForm("xjvnzrnw");
+  // useReducer für die Ticketmenge
+  const [state1, dispatch] = useReducer(reducer, initialState);
 
-  // Überprüfen, ob die Anfrage erfolgreich war
   const successMessage = state.succeeded
-    ? "Vielen Dank Ihre Nachricht wurde erfolgreich gesendet."
+   ? "Vielen Dank Ihre Nachricht wurde erfolgreich gesendet."
     : "";
 
   return (
-    <main className="flex justify-center items-center h-screen bg-gradient-to-r from-red-400/50 via-rose-500/75 to-red-600/75">
+    <div className="flex justify-center items-center h-screen bg-gradient-to-r from-red-400/50 via-rose-500/75 to-red-600/75">
       <Card className="w-2/3 pt-5 shadow-lg">
         <CardBody>
           <h2 className="text-center mb-4 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
@@ -45,13 +64,16 @@ const TicketsScreen = () => {
               <SelectItem>Herrensitzung</SelectItem>
             </Select>
 
-            <Select label="Menge" isRequired>
-              <SelectItem>1</SelectItem>
-              <SelectItem>2</SelectItem>
-              <SelectItem>3</SelectItem>
-              <SelectItem>4</SelectItem>
-              <SelectItem>5</SelectItem>
-            </Select>
+            <div className="flex justify-center items-center gap-5">
+              <p>Menge: {state1.count}</p>
+              <Button onClick={() => dispatch({ type: 'increment' })}>+</Button>
+              <Button
+                onClick={() => dispatch({ type: 'decrement' })}
+                disabled={state1.count <= 0}
+              >
+                -
+              </Button>
+            </div>
 
             <div className="flex gap-5">
               <Checkbox isRequired></Checkbox>
@@ -67,12 +89,11 @@ const TicketsScreen = () => {
             <Button type="submit" disabled={state.submitting}>
               Submit
             </Button>
-            {/* Anzeige der Bestätigungsnachricht */}
             <p>{successMessage}</p>
           </form>
         </CardBody>
       </Card>
-    </main>
+    </div>
   );
 };
 

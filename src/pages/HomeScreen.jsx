@@ -26,18 +26,21 @@ const images = [
   {
     url: pic_3,
   },
-  // {
-  //   url: pic_4,
-  // },
-  // { url: pic_5 },
+  {
+    url: pic_4,
+  },
+  { url: pic_5 },
 ];
 
 const HomeScreen = () => {
+  // State für die Confettianzeige.
   const [showConfetti, setShowConfetti] = useState(false);
   const navigate = useNavigate();
 
+  // Hook für das Modal
   const modal1 = useDisclosure();
 
+  // Auslösen des Confettis mit Verzögerung der nagivation
   const handleConfettiAndNavigate = () => {
     setShowConfetti(true);
     setTimeout(() => {
@@ -49,6 +52,7 @@ const HomeScreen = () => {
     <main>
       <div className="relative">
         <div>
+          {/* Carousel mit images gemapt */}
           <Carousel
             autoPlay={true}
             infiniteLoop={true}
@@ -81,22 +85,21 @@ const HomeScreen = () => {
         </div>
       </div>
       <Divider className="my-4" />
+      {/* Framer motion div */}
       <motion.div
         initial={{ x: "-100%", opacity: 0 }}
         animate={{ x: "0%", opacity: 1 }}
         transition={{ duration: 1, ease: "easeInOut" }}
       >
+        {/* Erste section */}
         <section className="px-4 py-12 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-16 bg-gradient-to-r from-red-400/50 via-rose-500/75 to-red-600/75">
           <div className="max-w-screen-sm sm:text-center sm:mx-auto text-xl">
-            <Link
-              to="/"
-              aria-label="View"
-              className="inline-block mb-5 rounded-full sm:mx-auto"
-            >
+            <Link to="/" className="inline-block mb-5 rounded-full sm:mx-auto">
               <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-indigo-50">
                 <AiOutlineNotification />
               </div>
             </Link>
+            {/* Textteil */}
             <h2 className="mb-4 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
               Willkomen bei der Dürscheder Mellsäck KG
             </h2>
@@ -111,14 +114,16 @@ const HomeScreen = () => {
       </motion.div>
 
       <Divider className="my-4" />
-      {/* New Hero Section */}
+      {/* Framer motion div */}
       <motion.div
         initial={{ y: "-100%", opacity: 0 }}
         animate={{ y: "0%", opacity: 1 }}
         transition={{ duration: 1, ease: "easeInOut" }}
       >
+        {/* Zweite section */}
         <section className="relative flex flex-col-reverse py-16 lg:pt-0 lg:flex-col lg:pb-0">
           <div className="inset-y-0 top-0 right-0 z-0 w-full max-w-xl px-4 mx-auto md:px-0 lg:pr-0 lg:mb-0 lg:mx-0 lg:w-7/12 lg:max-w-full lg:absolute xl:px-0">
+            {/* Teil um das Design des Bildes zu erreichen */}
             <svg
               className="absolute left-0 hidden h-full text-white transform -translate-x-1/2 lg:block"
               viewBox="0 0 100 100"
@@ -134,6 +139,7 @@ const HomeScreen = () => {
               alt="Website"
             />
           </div>
+          {/* Textteil beginnt hier */}
           <div className="relative flex flex-col items-start w-full max-w-xl px-4 mx-auto md:px-0 lg:px-8 lg:max-w-screen-xl">
             <div className="mb-16 lg:my-20 lg:max-w-lg lg:pr-5">
               <p className="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider uppercase rounded-full bg-teal-accent-400">
@@ -151,12 +157,12 @@ const HomeScreen = () => {
               <div className="flex items-center">
                 <Button
                   href="/"
-                  aria-label=""
                   className="inline-flex items-center font-semibold text-gray-800 transition-colors duration-200 hover:text-deep-purple-accent-700"
                   onPress={modal1.onOpen}
                 >
                   Mehr Infos
                 </Button>
+                {/* Modal beginnt hier */}
                 <Modal
                   isOpen={modal1.isOpen}
                   onOpenChange={modal1.onOpenChange}
@@ -202,6 +208,7 @@ const HomeScreen = () => {
         </section>
       </motion.div>
       <Divider className="my-4" />
+      {/* Dritte section */}
       <section className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-28 bg-gradient-to-r from-red-400/50 via-rose-500/75 to-red-600/75">
         <div className="flex flex-col items-start max-w-screen-sm md:flex-row sm:mx-auto text-xl">
           <Link to="/member" className="mb-4 mr-8">
@@ -209,6 +216,7 @@ const HomeScreen = () => {
               <AiOutlineUsergroupAdd />
             </div>
           </Link>
+          {/* Textteil */}
           <div>
             <p className="mb-2 text-xs font-semibold tracking-wide text-gray-800 uppercase">
               Unsere Gemeinschaft
@@ -228,6 +236,7 @@ const HomeScreen = () => {
         </div>
       </section>
       <Divider className="my-4" />
+      {/* Vierte section */}
       <section className="px-4 py-2 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-16">
         <div className="flex flex-col max-w-screen-lg overflow-hidden bg-white border rounded shadow-sm lg:flex-row sm:mx-auto">
           <div className="relative lg:w-1/2">
@@ -237,6 +246,7 @@ const HomeScreen = () => {
               className="object-cover w-full lg:absolute h-80 lg:h-full"
               loading="lazy"
             />
+            {/* Teil um das Design des Bildes zu erreichen */}
             <svg
               className="absolute top-0 right-0 hidden h-full text-white lg:inline-block"
               viewBox="0 0 20 104"
@@ -246,6 +256,7 @@ const HomeScreen = () => {
             </svg>
           </div>
           <div className="flex flex-col justify-center p-8 bg-white lg:p-16 lg:pl-10 lg:w-1/2">
+            {/* Textteil */}
             <div>
               <p className="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider uppercase rounded-full bg-teal-accent-400">
                 Kumm loss mer Fiere!
@@ -262,7 +273,6 @@ const HomeScreen = () => {
             <div className="flex items-center">
               <Button
                 href="/"
-                aria-label=""
                 className="inline-flex items-center font-semibold text-gray-800 transition-colors duration-200 hover:text-deep-purple-accent-700"
               >
                 <Link to="/history">Mehr Infos</Link>

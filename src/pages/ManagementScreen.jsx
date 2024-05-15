@@ -177,7 +177,6 @@ const ManagementScreen = () => {
             Vorstand
           </h2>
           <Table
-            aria-label="Example table with dynamic content"
             isStriped
             isCompact
           >

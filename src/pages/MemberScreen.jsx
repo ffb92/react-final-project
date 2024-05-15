@@ -175,7 +175,7 @@ const MemberScreen = () => {
           <h2 className="text-center mb-4 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
             Mitglieder
           </h2>
-          <Table aria-label="Example table with dynamic content" isStriped>
+          <Table isStriped>
             <TableHeader>
               {columns.map((column) => (
                 <TableColumn key={column.key}>{column.label}</TableColumn>

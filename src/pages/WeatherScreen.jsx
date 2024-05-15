@@ -15,7 +15,6 @@ const WeatherScreen = () => {
   useEffect(() => {
     const fetchWeather = async () => {
       try {
-        // Ersetzen Sie YOUR_KEY durch Ihren tatsächlichen API-Schlüssel
         const response = await fetch(
           "https://api.openweathermap.org/data/2.5/weather?q=Cologne&units=metric&APPID=d502fb7f386668e8f26a09e9e5b18218"
         );

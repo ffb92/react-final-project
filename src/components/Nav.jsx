@@ -21,12 +21,12 @@ const Nav = () => {
   const navigate = useNavigate();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-   const handleClick = (event) => {
-    event.preventDefault(); 
-    navigate(event.currentTarget.getAttribute("href")); // 
+  // Handler um die Navbar in der mobilen Ansicht zu schließen.
+  const handleClick = (event) => {
+    event.preventDefault();
+    navigate(event.currentTarget.getAttribute("href")); //
     setIsMenuOpen(false);
   };
-
 
   // Mobilelinks
   const menuItems = {
@@ -42,6 +42,7 @@ const Nav = () => {
     Wetter: "/weather",
   };
 
+  // Links für das Dropdown Menü
   const dropdownLinks = [
     {
       name: "Vorstand",
@@ -70,6 +71,7 @@ const Nav = () => {
     },
   ];
 
+  // Links für den Header
   const HeaderLinks = {
     Veranstaltungen: "/events",
     Eintrittskarten: "/tickets",
@@ -78,11 +80,14 @@ const Nav = () => {
   };
 
   return (
-    <Navbar isBordered isMenuOpen={isMenuOpen} onMenuOpenChange={(isOpen) => setIsMenuOpen(isOpen)}>
+    // Wichtig um das öffnen und schließen der mobilen Navbar zu steuern.
+    <Navbar
+      isBordered
+      isMenuOpen={isMenuOpen}
+      onMenuOpenChange={(isOpen) => setIsMenuOpen(isOpen)}
+    >
       <NavbarContent className="sm:hidden" justify="start">
-        <NavbarMenuToggle
-          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-        />
+        <NavbarMenuToggle />
       </NavbarContent>
       {/* Mobile */}
       <NavbarContent className="sm:hidden pr-3" justify="center">
@@ -98,10 +103,11 @@ const Nav = () => {
           <img src={logo} alt="logo" className="size-12" />
         </NavbarBrand>
         <NavbarItem isActive>
-          <Link to="/" key="/" aria-current="page">
+          <Link to="/" key="/">
             Startseite
           </Link>
         </NavbarItem>
+        {/* Dropdown Menü */}
         <Dropdown>
           <NavbarItem>
             <DropdownTrigger>
@@ -117,8 +123,7 @@ const Nav = () => {
             </DropdownTrigger>
           </NavbarItem>
           <DropdownMenu
-            aria-label="Navigation"
-            className="w-[340px]"
+            className="w-50"
             itemClasses={{
               base: "gap-4",
             }}
@@ -138,17 +143,15 @@ const Nav = () => {
 
         {Object.entries(HeaderLinks).map(([key, value]) => (
           <NavbarItem key={key}>
-            <Link to={value} aria-current="page">
-              {key}
-            </Link>
+            <Link to={value}>{key}</Link>
           </NavbarItem>
         ))}
       </NavbarContent>
 
       <NavbarContent justify="end">
         <NavbarItem>
-          <Button onClick={() => navigate("/contact")} variant="flat" className="bg-red-400/75">
-            Kontakt
+          <Button variant="flat" className="bg-red-400/75">
+            <Link to="/contact">Kontakt</Link>
           </Button>
         </NavbarItem>
       </NavbarContent>

@@ -37,7 +37,7 @@ const Footer = () => {
           <p>&copy; KG Dürscheder Mellsäck e.V. von 1975</p>
         </div>
       </div>
-
+      {/* Desktop */}
       <div className="container hidden sm:flex justify-center mx-auto px-4">
         <div className="max-w-md">
           <div className="flex h-5 items-center space-x-4 text-small">
