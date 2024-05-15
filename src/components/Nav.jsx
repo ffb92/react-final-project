@@ -1,4 +1,4 @@
-import React from "react";
+import { useState } from "react";
 import {
   Navbar,
   NavbarBrand,
@@ -19,12 +19,19 @@ import { Link, useNavigate } from "react-router-dom";
 
 const Nav = () => {
   const navigate = useNavigate();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+   // Funktion, die aufgerufen wird, wenn ein Link geklickt wird
+   const handleClick = (event) => {
+    event.preventDefault(); // Verhindert das Standardverhalten des Links
+    navigate(event.currentTarget.getAttribute("href")); // Navigiert zu dem gewünschten Pfad
+    setIsMenuOpen(false); // Setzt den Zustand des Menüs auf false, um es zu schließen
+  };
 
-  //! Kann man die links besser zusammenfügen?
+
   // Mobilelinks
   const menuItems = {
+    Startseite: "/",
     Vorstand: "/management",
     Geschichte: "/history",
     Mitglieder: "/member",
@@ -36,42 +43,31 @@ const Nav = () => {
     Wetter: "/weather",
   };
 
-  // Desktoplinks
-  // const dropdownLinks = [
-  //   {
-  //     Vorstand: "/management",
-  //   },
-  //   { Geschichte: "/history" },
-  //   { Mitglieder: "/member" },
-  //   { Tanzkorps: "/dancing" },
-  //   { Satzung: "/statutes" },
-  // ];
-
   const dropdownLinks = [
     {
       name: "Vorstand",
       link: "/management",
-      description: "Beschreibung für den Vorstand",
+      description: "Erfahren Sie mehr über unsere Vereinsleitung",
     },
     {
       name: "Geschichte",
       link: "/history",
-      description: "Beschreibung für die Geschichte",
+      description: "Entdecken Sie unsere Geschichte",
     },
     {
       name: "Mitglieder",
       link: "/member",
-      description: "Beschreibung für die Mitglieder",
+      description: "Lernen Sie unsere Mitglieder kennen",
     },
     {
       name: "Tanzkorps",
       link: "/dancing",
-      description: "Beschreibung für das Tanzkorps",
+      description: "Tänze und mitreißenden Auftritte unseres Tanzkorps",
     },
     {
       name: "Satzung",
       link: "/statutes",
-      description: "Beschreibung für die Satzung",
+      description: "Informieren Sie sich über unsere Richtlinien",
     },
   ];
 
@@ -83,7 +79,7 @@ const Nav = () => {
   };
 
   return (
-    <Navbar isBordered isMenuOpen={isMenuOpen} onMenuOpenChange={setIsMenuOpen}>
+    <Navbar isBordered isMenuOpen={isMenuOpen} onMenuOpenChange={(isOpen) => setIsMenuOpen(isOpen)}>
       <NavbarContent className="sm:hidden" justify="start">
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
@@ -172,6 +168,7 @@ const Nav = () => {
                   : "foreground"
               }
               size="lg"
+              onClick={handleClick}
             >
               {key}
             </Link>

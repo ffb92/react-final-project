@@ -16,18 +16,20 @@ import ImprintScreen from "./pages/ImprintScreen";
 import DataPrivacyScreen from "./pages/DataPrivacyScreen";
 import WeatherScreen from "./pages/WeatherScreen";
 
-
-
 //? Wichtig!
-//! BEschreibung in der navbar einfügen
-//! Mobile schließt sich die Navbar nicht wenn man was anklickt
-//! Breite des Background passt noch nicht zu 100% wird, bei 600~px rum weiss
+//* Beschreibung in der navbar einfügen
+//* Mobile schließt sich die Navbar nicht wenn man was anklickt
+//* Breite des Background passt noch nicht zu 100% wird, bei 600~px rum weiss
 //! Neue Website news kleiner machen
+//! Bilder gehen über Footer hinaus
+//! Tables sind nicht responsive
+//! Schrift mobile zentrieren
 
 //? Dann auch abschließend
 //! Symanthisch body, header usw.?
 //! images auslagern
 //! Colors anpassen von nextui
+//! Code optimieren und prüfen
 
 //? Wichtig am Ende zu prüfen und kommentieren!
 //! Bilder alle identische Größe
@@ -42,10 +44,6 @@ import WeatherScreen from "./pages/WeatherScreen";
 //! Content beim rendern animiert "einlaufen" lassen
 //! Back to top Button
 //! DarkMode?
-
-
-
-
 
 function App() {
   const navigate = useNavigate();

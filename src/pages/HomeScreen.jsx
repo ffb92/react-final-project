@@ -81,7 +81,7 @@ const HomeScreen = () => {
         animate={{ x: "0%", opacity: 1 }}
         transition={{ duration: 1, ease: "easeInOut" }}
       >
-        <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20 bg-gradient-to-r from-red-400/50 via-rose-500/75 to-red-600/75">
+        <div className="px-4 py-12 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-16 bg-gradient-to-r from-red-400/50 via-rose-500/75 to-red-600/75">
           <div className="max-w-screen-sm sm:text-center sm:mx-auto text-xl">
             <Link
               to="/"
@@ -123,13 +123,13 @@ const HomeScreen = () => {
               <path d="M50 0H100L50 100H0L50 0Z" />
             </svg>
             <img
-              className="object-cover w-full h-56 rounded shadow-lg lg:rounded-none lg:shadow-none md:h-96 lg:h-full"
+              className="object-cover w-full rounded shadow-lg lg:rounded-none lg:shadow-none md:h-96 lg:h-full"
               src={websiteImage}
               alt="Website"
             />
           </div>
           <div className="relative flex flex-col items-start w-full max-w-xl px-4 mx-auto md:px-0 lg:px-8 lg:max-w-screen-xl">
-            <div className="mb-16 lg:my-40 lg:max-w-lg lg:pr-5">
+            <div className="mb-16 lg:my-20 lg:max-w-lg lg:pr-5">
               <p className="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-teal-accent-400">
                 Endlich online!
               </p>
@@ -196,7 +196,7 @@ const HomeScreen = () => {
         </div>
       </motion.div>
       <Divider className="my-4" />
-      <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20 bg-gradient-to-r from-red-400/50 via-rose-500/75 to-red-600/75">
+      <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-28 bg-gradient-to-r from-red-400/50 via-rose-500/75 to-red-600/75">
         <div className="flex flex-col items-start max-w-screen-sm md:flex-row sm:mx-auto text-xl">
           <Link to="/member" className="mb-4 mr-8">
             <div className="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-indigo-50">
@@ -222,7 +222,7 @@ const HomeScreen = () => {
         </div>
       </div>
       <Divider className="my-4" />
-      <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-5">
+      <div className="px-4 py-2 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-16">
         <div className="flex flex-col max-w-screen-lg overflow-hidden bg-white border rounded shadow-sm lg:flex-row sm:mx-auto">
           <div className="relative lg:w-1/2">
             <img
