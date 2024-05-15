@@ -21,9 +21,8 @@ import WeatherScreen from "./pages/WeatherScreen";
 //* Mobile schließt sich die Navbar nicht wenn man was anklickt
 //* Breite des Background passt noch nicht zu 100% wird, bei 600~px rum weiss
 //* Neue Website news kleiner machen
-//! Bilder gehen über Footer hinaus
-//! Tables sind nicht responsive
-//! Schrift mobile zentrieren
+//* Bilder gehen über Footer hinaus
+
 
 //? Dann auch abschließend
 //! Symanthisch body, header usw.?
@@ -36,6 +35,7 @@ import WeatherScreen from "./pages/WeatherScreen";
 //! Prüfen, ob wirklich alles responsive ist!
 //! Kommentare nicht vergessen!
 //! Lighthouse
+//! Publish!!!
 
 //? Sollte machbar noch sein
 //! Die Nachrichten auf der Mainpage über map holen
@@ -44,6 +44,9 @@ import WeatherScreen from "./pages/WeatherScreen";
 //! Content beim rendern animiert "einlaufen" lassen
 //! Back to top Button
 //! DarkMode?
+
+//! Probleme
+//! Tables sind nicht responsive
 
 function App() {
   const navigate = useNavigate();

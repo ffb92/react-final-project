@@ -148,7 +148,7 @@ const Nav = () => {
 
       <NavbarContent justify="end">
         <NavbarItem>
-          <Button onClick={() => navigate("/contact")} variant="flat">
+          <Button onClick={() => navigate("/contact")} variant="flat" className="bg-red-400/75">
             Kontakt
           </Button>
         </NavbarItem>
