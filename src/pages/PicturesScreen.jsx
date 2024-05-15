@@ -14,12 +14,12 @@ import {
   useDisclosure,
 } from "@nextui-org/react";
 
-import pic_1 from "../assets/bild_1.jpg";
-import pic_2 from "../assets/bild_2.jpeg";
-import pic_3 from "../assets/bild_3.jpeg";
-import pic_4 from "../assets/bild_4.jpg";
-import pic_5 from "../assets/bild_5.jpg";
-import pic_6 from "../assets/bild_6.jpg";
+import pic_1 from "../assets/pic_1.jpg";
+import pic_2 from "../assets/pic_2.jpeg";
+import pic_3 from "../assets/pic_3.jpeg";
+import pic_4 from "../assets/pic_4.jpg";
+import pic_5 from "../assets/pic_5.jpg";
+import pic_6 from "../assets/pic_6.jpg";
 import { useState } from "react";
 
 const picturesInfo = [

@@ -25,16 +25,16 @@ import WeatherScreen from "./pages/WeatherScreen";
 
 
 //? Dann auch abschließend
-//! Symanthisch body, header usw.?
-//! images auslagern
-//! Colors anpassen von nextui
+//* Symanthisch body, header usw.?
+//* images auslagern
+//* Colors anpassen von nextui
 //! Code optimieren und prüfen
 
 //? Wichtig am Ende zu prüfen und kommentieren!
 //! Bilder alle identische Größe
 //! Prüfen, ob wirklich alles responsive ist!
 //! Kommentare nicht vergessen!
-//! Lighthouse
+//* Lighthouse
 //! Publish!!!
 
 //? Sollte machbar noch sein

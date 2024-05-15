@@ -21,11 +21,10 @@ const Nav = () => {
   const navigate = useNavigate();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-   // Funktion, die aufgerufen wird, wenn ein Link geklickt wird
    const handleClick = (event) => {
-    event.preventDefault(); // Verhindert das Standardverhalten des Links
-    navigate(event.currentTarget.getAttribute("href")); // Navigiert zu dem gewünschten Pfad
-    setIsMenuOpen(false); // Setzt den Zustand des Menüs auf false, um es zu schließen
+    event.preventDefault(); 
+    navigate(event.currentTarget.getAttribute("href")); // 
+    setIsMenuOpen(false);
   };
 
 

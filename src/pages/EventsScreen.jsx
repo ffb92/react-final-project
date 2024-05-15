@@ -8,8 +8,8 @@ import {
   useDisclosure,
   Divider,
 } from "@nextui-org/react";
-
-Button;
+import { Link } from "react-router-dom";
+Link;
 
 const EventsScreen = () => {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
@@ -34,7 +34,7 @@ const EventsScreen = () => {
         </div>
         <div className="relative flex flex-col items-start w-full max-w-xl px-4 mx-auto md:px-0 lg:px-8 lg:max-w-screen-xl">
           <div className="mb-16 lg:my-20 lg:max-w-lg lg:pr-5">
-            <p className="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-teal-accent-400">
+            <p className="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider uppercase rounded-full bg-teal-accent-400">
               Kumm loss mer fiere!
             </p>
             <h2 className="mb-5 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
@@ -50,12 +50,12 @@ const EventsScreen = () => {
                 href="/"
                 className="inline-flex items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide text-black transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
               >
-                Eintrittskarten?
+                <Link to="/tickets">Eintrittskarten?</Link>
               </Button>
               <Button
                 href="/"
                 aria-label=""
-                className="inline-flex items-center font-semibold text-gray-800 transition-colors duration-200 hover:text-deep-purple-accent-700"
+                className="inline-flex items-center font-semibold text-gray-800 transition-colors duration-200 hover:text-deep-purple-accent-700 bg-red-400/75"
                 onPress={onOpen}
               >
                 Mehr Infos
@@ -127,7 +127,7 @@ const EventsScreen = () => {
 
           <div className="flex flex-col justify-center p-8 bg-white lg:p-16 lg:pl-10 lg:w-1/2">
             <div>
-              <p className="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-teal-accent-400">
+              <p className="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider uppercase rounded-full bg-teal-accent-400">
                 Kumm loss mer Fiere!
               </p>
             </div>
@@ -140,16 +140,13 @@ const EventsScreen = () => {
               Januar 2025 Mittwoch, 29.01.25 um 14 Uhr (Einlass 12:45 Uhr)
             </p>
             <div className="flex items-center">
-              <Button
-                href="/"
-                className="inline-flex items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide text-black transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
-              >
-                Eintrittskarten?
+              <Button className="inline-flex items-center justify-center h-12 px-6 mr-6 font-medium tracking-wide text-black transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none">
+                <Link to="/tickets">Eintrittskarten?</Link>
               </Button>
               <Button
                 href="/"
                 aria-label=""
-                className="inline-flex items-center font-semibold text-gray-800 transition-colors duration-200 hover:text-deep-purple-accent-700"
+                className="inline-flex items-center font-semibold text-gray-800 transition-colors duration-200 hover:text-deep-purple-accent-700 bg-red-400/75"
                 onPress={onOpen}
               >
                 Mehr Infos

@@ -11,19 +11,25 @@ import {
 import { useState } from "react";
 import Fireworks from "react-canvas-confetti/dist/presets/fireworks";
 import { useNavigate } from "react-router-dom";
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 import { AiOutlineNotification, AiOutlineUsergroupAdd } from "react-icons/ai";
 import websiteImage from "../assets/website.png";
-import wagenImage from "../assets/wagen.jpeg";
+import historyImage from "../assets/history.jpeg";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import pic_3 from "../assets/pic_3.jpeg";
+import pic_4 from "../assets/pic_4.jpg";
+import pic_5 from "../assets/pic_5.jpg";
 
 const images = [
   {
-    url: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Sitzung_des_Rates_der_Stadt_K%C3%B6ln_im_G%C3%BCrzenich%2C_Februar_2022-8738.jpg/1280px-Sitzung_des_Rates_der_Stadt_K%C3%B6ln_im_G%C3%BCrzenich%2C_Februar_2022-8738.jpg",
+    url: pic_3,
   },
-  // {url: "https://www.koeln.de/wp-content/uploads/2023/04/karneval-rote-funken-1197-2000-1210x712.jpg.webp"}
+  // {
+  //   url: pic_4,
+  // },
+  // { url: pic_5 },
 ];
 
 const HomeScreen = () => {
@@ -124,13 +130,14 @@ const HomeScreen = () => {
             </svg>
             <img
               className="object-cover w-full rounded shadow-lg lg:rounded-none lg:shadow-none md:h-96 lg:h-full"
+              loading="lazy"
               src={websiteImage}
               alt="Website"
             />
           </div>
           <div className="relative flex flex-col items-start w-full max-w-xl px-4 mx-auto md:px-0 lg:px-8 lg:max-w-screen-xl">
             <div className="mb-16 lg:my-20 lg:max-w-lg lg:pr-5">
-              <p className="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-teal-accent-400">
+              <p className="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider uppercase rounded-full bg-teal-accent-400">
                 Endlich online!
               </p>
               <h2 className="mb-5 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
@@ -226,9 +233,10 @@ const HomeScreen = () => {
         <div className="flex flex-col max-w-screen-lg overflow-hidden bg-white border rounded shadow-sm lg:flex-row sm:mx-auto">
           <div className="relative lg:w-1/2">
             <img
-              src={wagenImage}
+              src={historyImage}
               alt=""
               className="object-cover w-full lg:absolute h-80 lg:h-full"
+              loading="lazy"
             />
             <svg
               className="absolute top-0 right-0 hidden h-full text-white lg:inline-block"
@@ -240,7 +248,7 @@ const HomeScreen = () => {
           </div>
           <div className="flex flex-col justify-center p-8 bg-white lg:p-16 lg:pl-10 lg:w-1/2">
             <div>
-              <p className="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-teal-accent-400">
+              <p className="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider uppercase rounded-full bg-teal-accent-400">
                 Kumm loss mer Fiere!
               </p>
             </div>
