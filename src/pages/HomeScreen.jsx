@@ -37,7 +37,6 @@ const HomeScreen = () => {
   const navigate = useNavigate();
 
   const modal1 = useDisclosure();
-  const modal2 = useDisclosure();
 
   const handleConfettiAndNavigate = () => {
     setShowConfetti(true);
@@ -265,47 +264,9 @@ const HomeScreen = () => {
                 href="/"
                 aria-label=""
                 className="inline-flex items-center font-semibold text-gray-800 transition-colors duration-200 hover:text-deep-purple-accent-700"
-                onPress={modal2.onOpen}
               >
-                Mehr Infos
+                <Link to="/history">Mehr Infos</Link>
               </Button>
-              <Modal isOpen={modal2.isOpen} onOpenChange={modal2.onOpenChange}>
-                <ModalContent>
-                  {(onClose) => (
-                    <>
-                      <ModalHeader className="flex flex-col gap-1">
-                        Geschichte
-                      </ModalHeader>
-                      <ModalBody>
-                        <p>
-                          Die Geschichte der Dürscheder Mellsäck KG ist geprägt
-                          von Tradition, Gemeinschaft und einem
-                          unerschütterlichen Geist des Karnevals. Von den
-                          bescheidenen Anfängen bis zu unserer heutigen Präsenz
-                          in der lokalen Karnevalsszene haben wir eine
-                          faszinierende Reise hinter uns. Erfahre mehr über die
-                          Gründer und Pioniere, die den Grundstein für unsere
-                          Gemeinschaft gelegt haben, und entdecke die
-                          Meilensteine, die unseren Weg geprägt haben. Begleite
-                          uns auf einer Zeitreise durch die Jahrzehnte voller
-                          unvergesslicher Momente, und lass dich inspirieren von
-                          der Geschichte einer Gemeinschaft, die fest in den
-                          Werten des Karnevals verwurzelt ist.
-                        </p>
-                      </ModalBody>
-                      <ModalFooter>
-                        <Button
-                          color="danger"
-                          variant="light"
-                          onPress={onClose}
-                        >
-                          Close
-                        </Button>
-                      </ModalFooter>
-                    </>
-                  )}
-                </ModalContent>
-              </Modal>
             </div>
           </div>
         </div>

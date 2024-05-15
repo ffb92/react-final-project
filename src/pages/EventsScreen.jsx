@@ -12,7 +12,8 @@ import { Link } from "react-router-dom";
 Link;
 
 const EventsScreen = () => {
-  const { isOpen, onOpen, onOpenChange } = useDisclosure();
+  const modal1 = useDisclosure();
+  const modal2 = useDisclosure();
 
   return (
     <main>
@@ -56,38 +57,29 @@ const EventsScreen = () => {
                 href="/"
                 aria-label=""
                 className="inline-flex items-center font-semibold text-gray-800 transition-colors duration-200 hover:text-deep-purple-accent-700 bg-red-400/75"
-                onPress={onOpen}
+                onPress={modal1.onOpen}
               >
                 Mehr Infos
               </Button>
-              <Modal isOpen={isOpen} onOpenChange={onOpenChange}>
+              <Modal isOpen={modal1.isOpen} onOpenChange={modal1.onOpenChange}>
                 <ModalContent>
                   {(onClose) => (
                     <>
                       <ModalHeader className="flex flex-col gap-1">
-                        Modal Title
+                        Damensitzung 2025
                       </ModalHeader>
                       <ModalBody>
                         <p>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit. Nullam pulvinar risus non risus hendrerit
-                          venenatis. Pellentesque sit amet hendrerit risus, sed
-                          porttitor quam.
-                        </p>
-                        <p>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit. Nullam pulvinar risus non risus hendrerit
-                          venenatis. Pellentesque sit amet hendrerit risus, sed
-                          porttitor quam.
-                        </p>
-                        <p>
-                          Magna exercitation reprehenderit magna aute tempor
-                          cupidatat consequat elit dolor adipisicing. Mollit
-                          dolor eiusmod sunt ex incididunt cillum quis. Velit
-                          duis sit officia eiusmod Lorem aliqua enim laboris do
-                          dolor eiusmod. Et mollit incididunt nisi consectetur
-                          esse laborum eiusmod pariatur proident Lorem eiusmod
-                          et. Culpa deserunt nostrud ad veniam.
+                          Freuen Sie sich auf eine unvergessliche Nacht voller
+                          Eleganz, Spaß und Gemeinschaft bei unserer
+                          diesjährigen Damensitzung. Tauchen Sie ein in eine
+                          Welt voller Lachen, Tanz und guter Gesellschaft,
+                          während wir gemeinsam die Karnevalssaison feiern.
+                          Genießen Sie ein exquisites Programm mit
+                          herausragenden Auftritten, mitreißender Musik und
+                          einem Hauch von Glamour. Treffen Sie alte Freunde,
+                          knüpfen Sie neue Bekanntschaften und erleben Sie einen
+                          Abend, der noch lange in Erinnerung bleiben wird.
                         </p>
                       </ModalBody>
                       <ModalFooter>
@@ -147,38 +139,30 @@ const EventsScreen = () => {
                 href="/"
                 aria-label=""
                 className="inline-flex items-center font-semibold text-gray-800 transition-colors duration-200 hover:text-deep-purple-accent-700 bg-red-400/75"
-                onPress={onOpen}
+                onPress={modal2.onOpen}
               >
                 Mehr Infos
               </Button>
-              <Modal isOpen={isOpen} onOpenChange={onOpenChange}>
+              <Modal isOpen={modal2.isOpen} onOpenChange={modal2.onOpenChange}>
                 <ModalContent>
                   {(onClose) => (
                     <>
                       <ModalHeader className="flex flex-col gap-1">
-                        Modal Title
+                        Herrensitzung 2025
                       </ModalHeader>
                       <ModalBody>
                         <p>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit. Nullam pulvinar risus non risus hendrerit
-                          venenatis. Pellentesque sit amet hendrerit risus, sed
-                          porttitor quam.
-                        </p>
-                        <p>
-                          Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit. Nullam pulvinar risus non risus hendrerit
-                          venenatis. Pellentesque sit amet hendrerit risus, sed
-                          porttitor quam.
-                        </p>
-                        <p>
-                          Magna exercitation reprehenderit magna aute tempor
-                          cupidatat consequat elit dolor adipisicing. Mollit
-                          dolor eiusmod sunt ex incididunt cillum quis. Velit
-                          duis sit officia eiusmod Lorem aliqua enim laboris do
-                          dolor eiusmod. Et mollit incididunt nisi consectetur
-                          esse laborum eiusmod pariatur proident Lorem eiusmod
-                          et. Culpa deserunt nostrud ad veniam.
+                          Bereiten Sie sich auf eine außergewöhnliche Nacht
+                          voller Tradition, Frohsinn und Geselligkeit vor – bei
+                          unserer jährlichen Herrensitzung. Tauchen Sie ein in
+                          die Atmosphäre der Kameradschaft, während wir
+                          gemeinsam die Freude am Karneval zelebrieren. Genießen
+                          Sie ein abwechslungsreiches Programm mit humorvollen
+                          Reden, mitreißenden Darbietungen und musikalischer
+                          Unterhaltung. Erleben Sie einen Abend voller guter
+                          Laune, herzlicher Gespräche und unvergesslicher
+                          Momente, die das Herz jedes Karnevalisten höher
+                          schlagen lassen.
                         </p>
                       </ModalBody>
                       <ModalFooter>

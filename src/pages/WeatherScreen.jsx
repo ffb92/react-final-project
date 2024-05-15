@@ -34,8 +34,8 @@ const WeatherScreen = () => {
 
   return (
     <main className="flex justify-center items-center h-screen bg-gradient-to-r from-red-400/50 via-rose-500/75 to-red-600/75">
-      <Card>
-        <CardHeader className="flex gap-3">
+      <Card className="w-2/3">
+        <CardHeader className="flex gap-3 items-center justify-center">
           <Image
             alt="nextui logo"
             height={60}

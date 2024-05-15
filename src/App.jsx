@@ -32,12 +32,13 @@ import WeatherScreen from "./pages/WeatherScreen";
 
 //? Wichtig am Ende zu prüfen und kommentieren!
 //! Bilder alle identische Größe
-//! Prüfen, ob wirklich alles responsive ist!
+//* Prüfen, ob wirklich alles responsive ist!
 //! Kommentare nicht vergessen!
 //* Lighthouse
 //! Publish!!!
 
 //? Sollte machbar noch sein
+//! useContext und functions auslagern
 //! Die Nachrichten auf der Mainpage über map holen
 
 //? Bei Zeit
